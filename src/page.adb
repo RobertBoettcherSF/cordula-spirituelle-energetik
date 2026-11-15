@@ -117,9 +117,6 @@ package body Page is
       T (Services_Line);
       Put_Line ("</p>");
       Tel_Line;
-      Put ("<p class=""hint"">");
-      T (Sound_Hint);
-      Put_Line ("</p>");
       Put ("<label class=""skip"" for=""" & Id_Skip & """>");
       T (Skip_Label);
       Put_Line ("</label>");

@@ -164,9 +164,8 @@ package body Style is
       Css ("  .splash .tel-line { margin: .15rem 0 0; }");
       Css ("  .splash a { color: inherit; }");
       Css ("  .hairline { width: 4.5rem; height: 1px; margin: .75rem auto; border: 0; background: " & Navy & "; opacity: .4; }");
-      Css ("  .hint { margin: .85rem 0 0; font-size: .95rem; letter-spacing: .02em; }");
       Css ("  .infty.mark { width: min(78vw, 300px); height: auto; }");
-      Css ("  .infty.head { width: min(64vw, 220px); height: auto; }");
+      Css ("  .infty.head { width: min(64vw, 220px); max-width: 100%; height: auto; }");
       Css ("  ." & Cls_Static & " { display: none; }");
       Css ("  .skip {");
       Css ("    position: absolute; left: 50%; bottom: max(1rem, env(safe-area-inset-bottom));");
@@ -208,8 +207,9 @@ package body Style is
       Css ("  }");
 
       Css ("  .sun {");
-      Css ("    position: fixed; top: -34px; left: -40px; z-index: 2;");
-      Css ("    width: min(220px, 42vw); height: auto; pointer-events: none; opacity: .92;");
+      Css ("    position: fixed; top: .75rem; left: .75rem; z-index: 5;");
+      Css ("    width: clamp(88px, 15vw, 156px); height: auto;");
+      Css ("    pointer-events: none; opacity: .94;");
       Css ("  }");
       Css ("  .gecko {");
       Css ("    position: fixed; left: 0; top: 0; z-index: 6; pointer-events: none;");
@@ -221,7 +221,7 @@ package body Style is
       Css ("  }");
 
       Css ("  .panel {");
-      Css ("    position: relative; z-index: 3;");
+      Css ("    position: relative; z-index: 3; overflow: hidden;");
       Css ("    max-width: 42rem; margin: 4.7rem auto 2.2rem;");
       Css ("    padding: 1.55rem 1.2rem 1.3rem;");
       Css ("    background: " & Cream & ";");
@@ -232,6 +232,8 @@ package body Style is
       Css ("  }");
       Css ("  .plaque {");
       Css ("    text-align: center; color: " & Navy & ";");
+      Css ("    width: min(24rem, calc(100% - 5.5rem));");
+      Css ("    margin: 1.75rem auto .35rem;");
       Css ("    padding: .85rem .8rem 1rem;");
       Css ("    background:");
       Css ("      radial-gradient(120% 80% at 50% 0%, " & Sheen & ", transparent 56%),");
@@ -290,7 +292,7 @@ package body Style is
       Css ("  }");
       Css ("  @media (max-width: 640px) {");
       Css ("    .panel { margin: 4.3rem .45rem 1.2rem; border-radius: 120px 120px 10px 10px; padding: 1.15rem .75rem 1rem; }");
-      Css ("    .sun { width: 120px; opacity: .7; }");
+      Css ("    .plaque { width: min(24rem, calc(100% - 3.2rem)); margin-top: 1.35rem; }");
       Css ("    .gecko { width: 104px; }");
       Css ("    .tools { top: .4rem; right: .4rem; }");
       Css ("  }");
