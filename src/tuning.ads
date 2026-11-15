@@ -2,11 +2,11 @@
 --  als CFG; CSS-Animationen werden aus denselben Werten erzeugt.
 --
 --  Splash: eine Lemniskaten-Runde dauert Splash_Hold Sekunden, danach
---  blendet Splash_Fade die Seite ein. Summe bleibt im Bereich 60–90 s.
+--  blendet Splash_Fade die Seite ein. 53.2 s ist 30 % schneller als 76 s.
 package Tuning is
 
-   Splash_Hold   : constant Float := 76.0;
-   Splash_Fade   : constant Float := 3.2;
+   Splash_Hold   : constant Float := 53.2;
+   Splash_Fade   : constant Float := 2.24;
    Header_Orbit  : constant Float := 50.0;
    Skip_Fade     : constant Float := 1.0;
 

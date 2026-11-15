@@ -83,8 +83,6 @@ package body Translations is
             return "Angebot";
          when Skip_Label =>
             return "Überspringen / Skip";
-         when Sound_Hint =>
-            return "Tippen startet leise Musik";
          when Sound_Idle =>
             return "Klang";
          when Sound_Mute =>
@@ -165,8 +163,6 @@ package body Translations is
             return "Offerings";
          when Skip_Label =>
             return "Überspringen / Skip";
-         when Sound_Hint =>
-            return "A tap starts quiet music";
          when Sound_Idle =>
             return "Sound";
          when Sound_Mute =>

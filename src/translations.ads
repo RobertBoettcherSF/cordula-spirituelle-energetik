@@ -33,7 +33,6 @@ package Translations is
       Services_Line,
       Services_Title,
       Skip_Label,
-      Sound_Hint,
       Sound_Idle,
       Sound_Mute,
       Sound_Unmute,
