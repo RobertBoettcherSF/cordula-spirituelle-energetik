@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cordula Dobos · Spirituelle Energetik</title>
+<meta name="description" content="Cordula Dobos, Spirituelle Energetik. Heilungen und Besetzungen. Tel. Vereinbarung: 0871 / 14230600.">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#e0b44a">
+<!-- Erzeugt durch bin/site. Nicht von Hand �ndern.
+     Texte: src/translations.adb
+     Farben: src/palette.ads
+     Zeiten, Ton, Gecko: src/tuning.ads -->
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; min-height: 100vh; color: #1a2744;
+  background-color: #e7a57c;
+  background-image:
+    radial-gradient(ellipse at 15% 0%, #f3c4a2, transparent 48%),
+    radial-gradient(ellipse at 100% 85%, #d08860, transparent 40%);
+  font-family: "Iowan Old Style", Palatino, "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+  font-size: 1.0625rem; line-height: 1.6;
+}
+img, svg { max-width: 100%; }
+a { color: #1e4f96; }
+a:hover { color: #5c1730; }
+::selection { background: #e0b44a; color: #16233f; }
+audio { display: none; }
+  .t { display: none; }
+  .t-de { display: inline; }
+  body:has(#lang-en:checked) .t { display: none; }
+  body:has(#lang-en:checked) .t-en { display: inline; }
+  .ph::after { content: " · Entwurf" ; font-size: .72em; letter-spacing: .04em; color: #6b4a3a; }
+  body:has(#lang-en:checked) .ph::after { content: " · draft"; }
+  .visually-hidden {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%);
+    white-space: nowrap; border: 0;
+  }
+  .skip-input {
+    position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+    overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); border: 0;
+  }
+  .plaster {
+    position: fixed; inset: 0; width: 100%; height: 100%;
+    pointer-events: none; z-index: 0; mix-blend-mode: multiply;
+    opacity: 0.38;
+  }
+  .tools {
+    position: fixed; z-index: 60; top: .6rem; right: .6rem;
+    display: flex; align-items: center; gap: .3rem;
+    padding: .2rem .35rem .2rem .4rem;
+    background: #fbfaf6;
+    border: 1px solid #16233f; border-radius: 999px;
+    box-shadow: 0 6px 16px rgba(60, 30, 10, .14);
+  }
+  .flag { position: relative; display: inline-flex; padding: 2px; border-radius: 3px; cursor: pointer; line-height: 0; }
+  .flag input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
+  .flag-svg { width: 28px; height: 18px; display: block; border-radius: 2px; box-shadow: 0 0 0 1px rgba(22,35,63,.25); }
+  .flag:has(input:checked) { box-shadow: 0 0 0 2px #16233f; }
+  .flag:focus-within { outline: 2px solid #16233f; outline-offset: 2px; }
+  .sound {
+    border: 0; background: transparent; color: #16233f;
+    display: inline-flex; align-items: center; gap: .28rem;
+    min-height: 44px; padding: .3rem .55rem; cursor: pointer;
+    font: inherit; letter-spacing: .04em;
+  }
+  .sound:focus-visible { outline: 2px solid #16233f; outline-offset: 2px; }
+  .speaker { width: 18px; height: 18px; display: block; }
+  .sound .when-on, .sound .when-off { display: none; }
+  .sound.is-on .when-idle { display: none; }
+  .sound.is-on .when-on { display: inline; }
+  .sound.is-muted .when-idle,
+  .sound.is-muted .when-on { display: none; }
+  .sound.is-muted .when-off { display: inline; }
+  .splash {
+    position: fixed; inset: 0; z-index: 40;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; color: #16233f;
+    padding: 4.6rem 1.15rem 5.6rem;
+    background:
+      radial-gradient(120% 72% at 50% 0%, #fff4d6, transparent 54%),
+      linear-gradient(165deg, #e8c56a 0%, #e0b44a 46%, #c9962e 100%);
+    animation: splash-hold 76.00s linear forwards, splash-fade 3.20s ease 76.00s forwards;
+  }
+  .splash::before, .splash::after {
+    content: ""; position: absolute; pointer-events: none; border: 1px solid #16233f;
+  }
+  .splash::before { inset: .7rem; opacity: .5; }
+  .splash::after { inset: .98rem; opacity: .32; }
+  .splash h1 {
+    font-weight: 500; line-height: 1.05; letter-spacing: .015em;
+    font-size: clamp(2.15rem, 6vw, 3.55rem); margin: .15rem 0 .1rem;
+  }
+  .splash .practice { margin: 0; letter-spacing: .09em; font-size: clamp(1.12rem, 2.6vw, 1.5rem); }
+  .splash .services-line { margin: .85rem 0 .2rem; letter-spacing: .04em; }
+  .splash .tel-line { margin: .15rem 0 0; }
+  .splash a { color: inherit; }
+  .hairline { width: 4.5rem; height: 1px; margin: .75rem auto; border: 0; background: #16233f; opacity: .4; }
+  .hint { margin: .85rem 0 0; font-size: .95rem; letter-spacing: .02em; }
+  .infty.mark { width: min(78vw, 300px); height: auto; }
+  .infty.head { width: min(64vw, 220px); height: auto; }
+  .static-dot { display: none; }
+  .skip {
+    position: absolute; left: 50%; bottom: max(1rem, env(safe-area-inset-bottom));
+    transform: translateX(-50%);
+    color: #16233f; background: #fff4d6;
+    border: 1px solid #16233f;
+    padding: .55rem 1.1rem; min-height: 44px;
+    display: inline-flex; align-items: center; justify-content: center;
+    letter-spacing: .08em; cursor: pointer; font: inherit;
+  }
+  .skip-input:focus-visible ~ .splash .skip { outline: 2px solid #16233f; outline-offset: 4px; }
+  .page {
+    position: relative; z-index: 1; opacity: 0; visibility: hidden;
+    animation: page-in 3.20s ease 76.00s forwards;
+  }
+  #skip:checked ~ .splash {
+    animation: splash-away 1.00s ease forwards;
+  }
+  #skip:checked ~ .page {
+    visibility: visible;
+    animation: page-in 1.00s ease forwards;
+  }
+  @keyframes splash-hold {
+    from { opacity: 1; visibility: visible; }
+    to { opacity: 1; visibility: visible; }
+  }
+  @keyframes splash-fade {
+    from { opacity: 1; visibility: visible; }
+    to { opacity: 0; visibility: hidden; pointer-events: none; }
+  }
+  @keyframes splash-away {
+    from { opacity: 1; visibility: visible; }
+    to { opacity: 0; visibility: hidden; pointer-events: none; }
+  }
+  @keyframes page-in {
+    from { opacity: 0; visibility: visible; }
+    to { opacity: 1; visibility: visible; }
+  }
+  .sun {
+    position: fixed; top: -34px; left: -40px; z-index: 2;
+    width: min(220px, 42vw); height: auto; pointer-events: none; opacity: .92;
+  }
+  .gecko {
+    position: fixed; left: 0; top: 0; z-index: 6; pointer-events: none;
+    width: 132px; height: auto; overflow: visible;
+    transform-origin: 50% 50%;
+    transform: translate(18px, calc(100vh - 120px)) rotate(-8.6deg);
+    filter: drop-shadow(0 2px 1px rgba(58, 40, 16, .3));
+  }
+  .panel {
+    position: relative; z-index: 3;
+    max-width: 42rem; margin: 4.7rem auto 2.2rem;
+    padding: 1.55rem 1.2rem 1.3rem;
+    background: #fbfaf6;
+    border: 3px solid #e0b44a;
+    border-radius: 190px 190px 12px 12px;
+    box-shadow: 0 0 0 7px #fbfaf6, 0 0 0 10px #1e4f96, 0 18px 36px rgba(80, 40, 20, .16);
+  }
+  .plaque {
+    text-align: center; color: #16233f;
+    padding: .85rem .8rem 1rem;
+    background:
+      radial-gradient(120% 80% at 50% 0%, #fff4d6, transparent 56%),
+      linear-gradient(165deg, #e8c56a, #e0b44a 58%, #c9962e);
+    border: 1px solid #c9962e;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .55), 0 10px 18px rgba(80, 40, 10, .1);
+  }
+  .plaque h1 {
+    font-weight: 500; line-height: 1.08; margin: .05rem 0;
+    font-size: clamp(2rem, 5vw, 2.85rem);
+  }
+  .plaque .practice { margin: 0; letter-spacing: .08em; font-size: 1.12rem; }
+  .plaque .services-line { margin: .55rem 0 .15rem; }
+  .plaque a, .splash a { color: inherit; text-underline-offset: .15em; }
+  nav { display: flex; flex-wrap: wrap; justify-content: center; gap: .35rem 1.15rem; margin: 1rem 0 .2rem; }
+  .nav-a {
+    color: #16233f; text-decoration: none; letter-spacing: .06em;
+    padding: .4rem .15rem; border-bottom: 1px solid transparent; min-height: 44px;
+    display: inline-flex; align-items: center;
+  }
+  .nav-a:hover { color: #7a2240; border-bottom-color: #7a2240; }
+  .panel:has(#ueber:target) a[href="#ueber"],
+  .panel:has(#angebot:target) a[href="#angebot"],
+  .panel:has(#kontakt:target) a[href="#kontakt"] {
+    color: #7a2240; border-bottom-color: #7a2240;
+  }
+  .azulejo-rule { width: 100%; height: 26px; display: block; margin: .15rem 0 .35rem; }
+  main { padding: 0 .15rem; }
+  section { scroll-margin-top: 4.5rem; padding: .55rem 0 .2rem; }
+  h2 { font-weight: 500; font-size: 1.55rem; letter-spacing: .03em; margin: .15rem 0 .4rem; color: #16233f; }
+  h3 { font-weight: 500; letter-spacing: .04em; margin: 0 0 .35rem; color: #7a2240; }
+  p { margin: .35rem 0 .55rem; }
+  .about-grid, .contact-grid { display: grid; gap: 1rem; align-items: center; }
+  .tile { width: 100%; height: auto; display: block; }
+  .cards { display: grid; gap: .75rem; }
+  .card {
+    border: 2px solid #1e4f96; background: #fbfaf6;
+    padding: .8rem .85rem .95rem;
+    box-shadow: inset 0 0 0 4px #fbfaf6, inset 0 0 0 6px #c5d4ec;
+  }
+  .call { font-size: clamp(1.35rem, 2.6vw, 1.75rem); margin: .35rem 0 .2rem; }
+  .call a, a.tel { color: #1e4f96; white-space: nowrap; }
+  .plaque a.tel, .splash a.tel { color: inherit; }
+  footer { text-align: center; padding: .2rem 0 .4rem; }
+  .casa { width: min(100%, 280px); height: auto; margin: 0 auto; display: block; }
+  figcaption.visually-hidden { position: absolute; }
+  @media (min-width: 760px) {
+    .about-grid { grid-template-columns: .78fr 1.22fr; }
+    .contact-grid { grid-template-columns: 1.15fr .85fr; }
+    .cards { grid-template-columns: 1fr 1fr; }
+    .panel { padding: 1.8rem 1.7rem 1.5rem; }
+  }
+  @media (max-width: 640px) {
+    .panel { margin: 4.3rem .45rem 1.2rem; border-radius: 120px 120px 10px 10px; padding: 1.15rem .75rem 1rem; }
+    .sun { width: 120px; opacity: .7; }
+    .gecko { width: 104px; }
+    .tools { top: .4rem; right: .4rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .splash, #skip:checked ~ .splash { display: none; }
+    .page, #skip:checked ~ .page {
+      opacity: 1; visibility: visible; animation: none;
+    }
+    .motion-dot { display: none; }
+    .static-dot { display: block; }
+    .gecko { display: none; }
+    .flag:hover { transform: none; }
+  }
+</style>
+</head>
+<body>
+<input class="skip-input" type="checkbox" id="skip">
+<svg xmlns="http://www.w3.org/2000/svg" class="plaster" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+<filter id="plaster" x="0" y="0" width="100%" height="100%">
+<feTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="4" stitchTiles="stitch" result="n"/>
+<feColorMatrix in="n" type="saturate" values="0"/>
+</filter>
+<rect width="100%" height="100%" filter="url(#plaster)"/>
+</svg>
+<div class="tools">
+<label class="flag"><input type="radio" name="lang" id="lang-de" checked>
+<span class="visually-hidden">Deutsch</span>
+<svg xmlns="http://www.w3.org/2000/svg" class="flag-svg" viewBox="0 0 5 3" aria-hidden="true" focusable="false">
+<rect width="5" height="1" fill="#000"/>
+<rect y="1" width="5" height="1" fill="#dd0000"/>
+<rect y="2" width="5" height="1" fill="#ffce00"/>
+</svg>
+</label>
+<label class="flag"><input type="radio" name="lang" id="lang-en">
+<span class="visually-hidden">English</span>
+<svg xmlns="http://www.w3.org/2000/svg" class="flag-svg" viewBox="0 0 60 30" aria-hidden="true" focusable="false">
+<defs><clipPath id="union-clip"><rect width="60" height="30"/></clipPath></defs>
+<g clip-path="url(#union-clip)">
+<rect width="60" height="30" fill="#012169"/>
+<path d="M0 0L60 30M60 0L0 30" stroke="#fffcf7" stroke-width="10"/>
+<path d="M0 0L60 30" stroke="#c8102e" stroke-width="4"/>
+<path d="M60 0L0 30" stroke="#c8102e" stroke-width="4"/>
+<path d="M30 0V30M0 15H60" stroke="#fffcf7" stroke-width="16"/>
+<path d="M30 0V30M0 15H60" stroke="#c8102e" stroke-width="9"/>
+</g>
+</svg>
+</label>
+<button type="button" class="sound" id="sound" aria-pressed="false"><svg xmlns="http://www.w3.org/2000/svg" class="speaker" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+<path d="M4.00 9.00L8.00 9.00L13.00 5.00L13.00 19.00L8.00 15.00L4.00 15.00Z" fill="currentColor"/>
+<path d="M16.00 8.50Q20.00 12.00 16.00 15.50" fill="none" stroke="currentColor" stroke-width="1.60" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<span class="when-idle"><span class="t t-de" lang="de">Klang</span><span class="t t-en" lang="en">Sound</span></span><span class="when-on"><span class="t t-de" lang="de">Ton aus</span><span class="t t-en" lang="en">Mute</span></span><span class="when-off"><span class="t t-de" lang="de">Ton an</span><span class="t t-en" lang="en">Unmute</span></span></button>
+</div>
+<div class="splash" id="splash">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="infty mark" viewBox="0 0 240 120" aria-hidden="true" focusable="false">
+<defs>
+<filter id="mark-glow" x="-40%" y="-40%" width="180%" height="180%">
+<feGaussianBlur stdDeviation="1.2" result="b"/>
+<feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+</defs>
+<path id="mark-path" d="M120.00 60.00L117.27 57.44L114.53 54.88L111.76 52.34L108.95 49.81L106.08 47.33L103.13 44.88L100.09 42.48L96.94 40.15L93.68 37.90L90.29 35.75L86.75 33.72L83.05 31.83L79.20 30.12L75.17 28.61L70.97 27.33L66.62 26.34L62.11 25.67L57.47 25.36L52.73 25.48L47.95 26.05L43.17 27.13L38.48 28.75L33.96 30.94L29.71 33.71L25.85 37.04L22.49 40.90L19.73 45.22L17.69 49.92L16.43 54.89L16.00 60.00L16.43 65.11L17.69 70.08L19.73 74.78L22.49 79.10L25.85 82.96L29.71 86.29L33.96 89.06L38.48 91.25L43.17 92.87L47.95 93.95L52.73 94.52L57.47 94.64L62.11 94.33L66.62 93.66L70.97 92.67L75.17 91.39L79.20 89.88L83.05 88.17L86.75 86.28L90.29 84.25L93.68 82.10L96.94 79.85L100.09 77.52L103.13 75.12L106.08 72.67L108.95 70.19L111.76 67.66L114.53 65.12L117.27 62.56L120.00 60.00L122.73 57.44L125.47 54.88L128.24 52.34L131.05 49.81L133.93 47.33L136.87 44.88L139.91 42.48L143.06 40.15L146.32 37.90L149.71 35.75L153.25 33.72L156.95 31.83L160.80 30.12L164.83 28.61L169.03 27.33L173.38 26.34L177.89 25.67L182.53 25.36L187.27 25.48L192.05 26.05L196.83 27.13L201.52 28.75L206.04 30.94L210.29 33.71L214.15 37.04L217.51 40.90L220.27 45.22L222.31 49.92L223.57 54.89L224.00 60.00L223.57 65.11L222.31 70.08L220.27 74.78L217.51 79.10L214.15 82.96L210.29 86.29L206.04 89.06L201.52 91.25L196.83 92.87L192.05 93.95L187.27 94.52L182.53 94.64L177.89 94.33L173.38 93.66L169.03 92.67L164.83 91.39L160.80 89.88L156.95 88.17L153.25 86.28L149.71 84.25L146.32 82.10L143.06 79.85L139.91 77.52L136.87 75.12L133.92 72.67L131.05 70.19L128.24 67.66L125.47 65.12L122.73 62.56L120.00 60.00" fill="none" stroke="#7a2240" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle class="motion-dot" r="4.60" cx="0" cy="0" fill="#f4d56a" stroke="#8a5a10" stroke-width="0.7" filter="url(#mark-glow)">
+<animateMotion dur="76.00s" repeatCount="1" calcMode="linear" rotate="0">
+<mpath href="#mark-path" xlink:href="#mark-path"/>
+</animateMotion>
+</circle>
+<circle class="static-dot" cx="120.00" cy="60.00" r="4.60" fill="#f4d56a" stroke="#8a5a10" stroke-width="0.70"/>
+</svg>
+<h1><span class="t t-de" lang="de">Cordula Dobos</span><span class="t t-en" lang="en">Cordula Dobos</span></h1>
+<p class="practice"><span class="t t-de" lang="de">Spirituelle Energetik</span><span class="t t-en" lang="en">Spiritual Energetics</span></p>
+<hr class="hairline">
+<p class="services-line"><span class="t t-de" lang="de">· Heilungen · Besetzungen</span><span class="t t-en" lang="en">· Healings · Attachments</span></p>
+<p class="tel-line"><span class="t t-de" lang="de">Tel. Vereinbarung: </span><span class="t t-en" lang="en">Tel. by appointment: </span><a class="tel" href="tel:+4987114230600">0871 / 14230600</a><span class="t t-de" lang="de"> (AB)</span><span class="t t-en" lang="en"> (voicemail)</span></p>
+<p class="hint"><span class="t t-de" lang="de">Tippen startet leise Musik</span><span class="t t-en" lang="en">A tap starts quiet music</span></p>
+<label class="skip" for="skip"><span class="t t-de" lang="de">Überspringen / Skip</span><span class="t t-en" lang="en">Überspringen / Skip</span></label>
+</div>
+<div class="page" id="seite">
+<svg xmlns="http://www.w3.org/2000/svg" class="sun" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+<path d="M100.00 70.00Q100.00 40.00 100.00 10.00" fill="none" stroke="#8a5a3a" stroke-width="3.40" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="100.00" cy="10.00" r="5.50" fill="none" stroke="#2a4a54" stroke-width="1.60"/>
+<path d="M110.26 71.81Q124.21 56.67 123.26 36.10" fill="none" stroke="#3e6572" stroke-width="2.40" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M119.28 77.02Q135.83 51.74 157.85 31.06" fill="none" stroke="#3e6572" stroke-width="3.40" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M125.98 85.00Q138.73 69.09 158.89 66.00" fill="none" stroke="#3e6572" stroke-width="2.40" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="158.89" cy="66.00" r="5.50" fill="none" stroke="#2a4a54" stroke-width="1.60"/>
+<path d="M129.54 94.79Q160.29 96.39 188.63 84.37" fill="none" stroke="#3e6572" stroke-width="3.40" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M129.54 105.21Q147.15 114.80 166.97 111.81" fill="none" stroke="#8a5a3a" stroke-width="2.40" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M125.98 115.00Q156.86 121.51 177.94 145.00" fill="none" stroke="#3e6572" stroke-width="3.40" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="177.94" cy="145.00" r="5.50" fill="none" stroke="#2a4a54" stroke-width="1.60"/>
+<path d="M119.28 122.98Q135.28 134.36 143.71 152.09" fill="none" stroke="#3e6572" stroke-width="2.40" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M110.26 128.19Q109.22 160.50 130.78 184.57" fill="none" stroke="#3e6572" stroke-width="3.40" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M100.00 130.00Q96.83 149.00 100.00 168.00" fill="none" stroke="#3e6572" stroke-width="2.40" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="100.00" cy="168.00" r="5.50" fill="none" stroke="#2a4a54" stroke-width="1.60"/>
+<path d="M89.74 128.19Q92.13 160.99 69.22 184.57" fill="none" stroke="#8a5a3a" stroke-width="3.40" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M80.72 122.98Q69.42 138.30 56.29 152.09" fill="none" stroke="#3e6572" stroke-width="2.40" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M74.02 115.00Q41.04 117.88 22.06 145.00" fill="none" stroke="#3e6572" stroke-width="3.40" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="22.06" cy="145.00" r="5.50" fill="none" stroke="#2a4a54" stroke-width="1.60"/>
+<path d="M70.46 105.21Q51.90 109.36 33.03 111.81" fill="none" stroke="#3e6572" stroke-width="2.40" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M70.46 94.79Q38.55 102.98 11.37 84.37" fill="none" stroke="#3e6572" stroke-width="3.40" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M74.02 85.00Q59.00 73.01 41.11 66.00" fill="none" stroke="#8a5a3a" stroke-width="2.40" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="41.11" cy="66.00" r="5.50" fill="none" stroke="#2a4a54" stroke-width="1.60"/>
+<path d="M80.72 77.02Q70.86 46.12 42.15 31.06" fill="none" stroke="#3e6572" stroke-width="3.40" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M89.74 71.81Q78.84 55.56 76.74 36.10" fill="none" stroke="#3e6572" stroke-width="2.40" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="100.00" cy="100.00" r="26.00" fill="#3e6572" stroke="#2a4a54" stroke-width="2.00"/>
+<circle cx="100.00" cy="100.00" r="20.00" fill="#2a4a54"/>
+<ellipse cx="91.00" cy="96.00" rx="3.20" ry="4.00" fill="#fffcf7"/>
+<ellipse cx="109.00" cy="96.00" rx="3.20" ry="4.00" fill="#fffcf7"/>
+<circle cx="91.00" cy="97.00" r="1.30" fill="#1a2744"/>
+<circle cx="109.00" cy="97.00" r="1.30" fill="#1a2744"/>
+<path d="M94.00 108.00Q100.00 114.00 106.00 108.00" fill="none" stroke="#fffcf7" stroke-width="1.40" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="gecko" id="gecko" viewBox="0 0 230 110" aria-hidden="true" focusable="false">
+<defs>
+<linearGradient id="gecko-bronze" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#f0d48a"/>
+<stop offset="0.45" stop-color="#b08a45"/>
+<stop offset="1" stop-color="#6e4e22"/>
+</linearGradient>
+<clipPath id="gecko-clip"><ellipse cx="140.00" cy="54.00" rx="36" ry="13"/></clipPath>
+</defs>
+<g class="gecko-tail" data-px="96.00" data-py="54.00">
+<path d="M96.00 46.00C68.00 40.00 36.00 62.00 16.00 80.00C8.00 88.00 12.00 98.00 26.00 90.00C48.00 76.00 70.00 64.00 96.00 62.00Z" fill="url(#gecko-bronze)"/>
+</g>
+<g class="gecko-body" data-px="140.00" data-py="54.00">
+<ellipse cx="140.00" cy="54.00" rx="40.00" ry="16.00" fill="url(#gecko-bronze)" stroke="#3a2810" stroke-width="0.80"/>
+<g clip-path="url(#gecko-clip)">
+<path d="M112.00 54.00Q140.00 46.00 170.00 56.00" fill="none" stroke="#2f6b38" stroke-width="1.30" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="118.22" cy="58.93" rx="7.50" ry="3.20" transform="rotate(34.0 118.22 58.93)" fill="#3e8c45"/>
+<ellipse cx="124.44" cy="58.37" rx="7.50" ry="3.20" transform="rotate(53.5 124.44 58.37)" fill="#7cb342"/>
+<ellipse cx="130.67" cy="52.95" rx="7.50" ry="3.20" transform="rotate(50.0 130.67 52.95)" fill="#3e8c45"/>
+<ellipse cx="136.89" cy="48.70" rx="7.50" ry="3.20" transform="rotate(25.1 136.89 48.70)" fill="#7cb342"/>
+<ellipse cx="143.11" cy="50.34" rx="7.50" ry="3.20" transform="rotate(-10.5 143.11 50.34)" fill="#3e8c45"/>
+<ellipse cx="149.33" cy="56.06" rx="7.50" ry="3.20" transform="rotate(-41.6 149.33 56.06)" fill="#7cb342"/>
+<ellipse cx="155.56" cy="59.48" rx="7.50" ry="3.20" transform="rotate(-54.9 155.56 59.48)" fill="#3e8c45"/>
+<ellipse cx="161.78" cy="56.81" rx="7.50" ry="3.20" transform="rotate(-44.7 161.78 56.81)" fill="#7cb342"/>
+</g>
+<ellipse cx="186.00" cy="50.00" rx="22.00" ry="14.00" fill="url(#gecko-bronze)" stroke="#3a2810" stroke-width="0.80"/>
+<ellipse cx="204.00" cy="52.00" rx="8.00" ry="5.50" transform="rotate(8.0 204.00 52.00)" fill="#b08a45" stroke="#3a2810" stroke-width="0.50"/>
+<circle cx="190.00" cy="46.00" r="4.40" fill="#3a2810"/>
+<circle cx="178.00" cy="44.50" r="2.80" fill="#3a2810"/>
+<circle cx="191.40" cy="44.60" r="1.15" fill="#fffcf7"/>
+<circle cx="178.80" cy="43.60" r="0.70" fill="#fffcf7"/>
+<g class="leg" data-x="118.00" data-y="50.00">
+<path d="M118.00 50.00Q106.00 70.00 94.00 84.00" fill="none" stroke="#6e4e22" stroke-width="3.30" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="93.26" cy="91.93" r="3.50" fill="#f0d48a" stroke="#3a2810" stroke-width="0.60"/>
+<circle cx="89.77" cy="88.94" r="3.50" fill="#f0d48a" stroke="#3a2810" stroke-width="0.60"/>
+<circle cx="86.28" cy="85.94" r="3.50" fill="#f0d48a" stroke="#3a2810" stroke-width="0.60"/>
+</g>
+<g class="leg" data-x="128.00" data-y="60.00">
+<path d="M128.00 60.00Q114.00 82.00 100.00 94.00" fill="none" stroke="#6e4e22" stroke-width="3.30" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="98.06" cy="101.72" r="3.50" fill="#f0d48a" stroke="#3a2810" stroke-width="0.60"/>
+<circle cx="95.06" cy="98.23" r="3.50" fill="#f0d48a" stroke="#3a2810" stroke-width="0.60"/>
+<circle cx="92.07" cy="94.74" r="3.50" fill="#f0d48a" stroke="#3a2810" stroke-width="0.60"/>
+</g>
+<g class="leg" data-x="158.00" data-y="50.00">
+<path d="M158.00 50.00Q170.00 70.00 184.00 82.00" fill="none" stroke="#6e4e22" stroke-width="3.30" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="191.93" cy="82.74" r="3.50" fill="#f0d48a" stroke="#3a2810" stroke-width="0.60"/>
+<circle cx="188.94" cy="86.23" r="3.50" fill="#f0d48a" stroke="#3a2810" stroke-width="0.60"/>
+<circle cx="185.94" cy="89.72" r="3.50" fill="#f0d48a" stroke="#3a2810" stroke-width="0.60"/>
+</g>
+<g class="leg" data-x="168.00" data-y="60.00">
+<path d="M168.00 60.00Q182.00 80.00 198.00 90.00" fill="none" stroke="#6e4e22" stroke-width="3.30" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="205.95" cy="89.54" r="3.50" fill="#f0d48a" stroke="#3a2810" stroke-width="0.60"/>
+<circle cx="203.51" cy="93.44" r="3.50" fill="#f0d48a" stroke="#3a2810" stroke-width="0.60"/>
+<circle cx="201.07" cy="97.35" r="3.50" fill="#f0d48a" stroke="#3a2810" stroke-width="0.60"/>
+</g>
+</g>
+</svg>
+<div class="panel">
+<header class="plaque">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="infty head" viewBox="0 0 240 120" aria-hidden="true" focusable="false">
+<defs>
+<filter id="head-glow" x="-40%" y="-40%" width="180%" height="180%">
+<feGaussianBlur stdDeviation="1.2" result="b"/>
+<feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+</defs>
+<path id="head-path" d="M120.00 60.00L117.27 57.44L114.53 54.88L111.76 52.34L108.95 49.81L106.08 47.33L103.13 44.88L100.09 42.48L96.94 40.15L93.68 37.90L90.29 35.75L86.75 33.72L83.05 31.83L79.20 30.12L75.17 28.61L70.97 27.33L66.62 26.34L62.11 25.67L57.47 25.36L52.73 25.48L47.95 26.05L43.17 27.13L38.48 28.75L33.96 30.94L29.71 33.71L25.85 37.04L22.49 40.90L19.73 45.22L17.69 49.92L16.43 54.89L16.00 60.00L16.43 65.11L17.69 70.08L19.73 74.78L22.49 79.10L25.85 82.96L29.71 86.29L33.96 89.06L38.48 91.25L43.17 92.87L47.95 93.95L52.73 94.52L57.47 94.64L62.11 94.33L66.62 93.66L70.97 92.67L75.17 91.39L79.20 89.88L83.05 88.17L86.75 86.28L90.29 84.25L93.68 82.10L96.94 79.85L100.09 77.52L103.13 75.12L106.08 72.67L108.95 70.19L111.76 67.66L114.53 65.12L117.27 62.56L120.00 60.00L122.73 57.44L125.47 54.88L128.24 52.34L131.05 49.81L133.93 47.33L136.87 44.88L139.91 42.48L143.06 40.15L146.32 37.90L149.71 35.75L153.25 33.72L156.95 31.83L160.80 30.12L164.83 28.61L169.03 27.33L173.38 26.34L177.89 25.67L182.53 25.36L187.27 25.48L192.05 26.05L196.83 27.13L201.52 28.75L206.04 30.94L210.29 33.71L214.15 37.04L217.51 40.90L220.27 45.22L222.31 49.92L223.57 54.89L224.00 60.00L223.57 65.11L222.31 70.08L220.27 74.78L217.51 79.10L214.15 82.96L210.29 86.29L206.04 89.06L201.52 91.25L196.83 92.87L192.05 93.95L187.27 94.52L182.53 94.64L177.89 94.33L173.38 93.66L169.03 92.67L164.83 91.39L160.80 89.88L156.95 88.17L153.25 86.28L149.71 84.25L146.32 82.10L143.06 79.85L139.91 77.52L136.87 75.12L133.92 72.67L131.05 70.19L128.24 67.66L125.47 65.12L122.73 62.56L120.00 60.00" fill="none" stroke="#7a2240" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle class="motion-dot" r="3.30" cx="0" cy="0" fill="#f4d56a" stroke="#8a5a10" stroke-width="0.7" filter="url(#head-glow)">
+<animateMotion dur="50.00s" repeatCount="indefinite" calcMode="linear" rotate="0">
+<mpath href="#head-path" xlink:href="#head-path"/>
+</animateMotion>
+</circle>
+<circle class="static-dot" cx="120.00" cy="60.00" r="3.30" fill="#f4d56a" stroke="#8a5a10" stroke-width="0.70"/>
+</svg>
+<h1><span class="t t-de" lang="de">Cordula Dobos</span><span class="t t-en" lang="en">Cordula Dobos</span></h1>
+<p class="practice"><span class="t t-de" lang="de">Spirituelle Energetik</span><span class="t t-en" lang="en">Spiritual Energetics</span></p>
+<p class="services-line"><span class="t t-de" lang="de">· Heilungen · Besetzungen</span><span class="t t-en" lang="en">· Healings · Attachments</span></p>
+<p class="tel-line"><span class="t t-de" lang="de">Tel. Vereinbarung: </span><span class="t t-en" lang="en">Tel. by appointment: </span><a class="tel" href="tel:+4987114230600">0871 / 14230600</a><span class="t t-de" lang="de"> (AB)</span><span class="t t-en" lang="en"> (voicemail)</span></p>
+</header>
+<nav>
+<span class="visually-hidden"><span class="t t-de" lang="de">Seitenabschnitte</span><span class="t t-en" lang="en">Sections</span></span>
+<a class="nav-a" href="#ueber"><span class="t t-de" lang="de">Über mich</span><span class="t t-en" lang="en">About</span></a>
+<a class="nav-a" href="#angebot"><span class="t t-de" lang="de">Angebot</span><span class="t t-en" lang="en">Offerings</span></a>
+<a class="nav-a" href="#kontakt"><span class="t t-de" lang="de">Kontakt</span><span class="t t-en" lang="en">Contact</span></a>
+</nav>
+<svg xmlns="http://www.w3.org/2000/svg" class="azulejo-rule" viewBox="0 0 360 26" aria-hidden="true" focusable="false">
+<path d="M14.00 13.00L22.00 4.00L30.00 13.00L22.00 22.00Z" fill="none" stroke="#1e4f96" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="22.00" cy="13.00" r="1.70" fill="#7a2240"/>
+<path d="M54.00 13.00L62.00 4.00L70.00 13.00L62.00 22.00Z" fill="none" stroke="#1e4f96" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="62.00" cy="13.00" r="1.50" fill="#3e8c45"/>
+<path d="M94.00 13.00L102.00 4.00L110.00 13.00L102.00 22.00Z" fill="none" stroke="#1e4f96" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="102.00" cy="13.00" r="1.70" fill="#7a2240"/>
+<path d="M134.00 13.00L142.00 4.00L150.00 13.00L142.00 22.00Z" fill="none" stroke="#1e4f96" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="142.00" cy="13.00" r="1.50" fill="#3e8c45"/>
+<path d="M174.00 13.00L182.00 4.00L190.00 13.00L182.00 22.00Z" fill="none" stroke="#1e4f96" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="182.00" cy="13.00" r="1.70" fill="#7a2240"/>
+<path d="M214.00 13.00L222.00 4.00L230.00 13.00L222.00 22.00Z" fill="none" stroke="#1e4f96" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="222.00" cy="13.00" r="1.50" fill="#3e8c45"/>
+<path d="M254.00 13.00L262.00 4.00L270.00 13.00L262.00 22.00Z" fill="none" stroke="#1e4f96" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="262.00" cy="13.00" r="1.70" fill="#7a2240"/>
+<path d="M294.00 13.00L302.00 4.00L310.00 13.00L302.00 22.00Z" fill="none" stroke="#1e4f96" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="302.00" cy="13.00" r="1.50" fill="#3e8c45"/>
+<path d="M334.00 13.00L342.00 4.00L350.00 13.00L342.00 22.00Z" fill="none" stroke="#1e4f96" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="342.00" cy="13.00" r="1.70" fill="#7a2240"/>
+</svg>
+<main>
+<section id="ueber">
+<h2><span class="t t-de" lang="de">Über mich</span><span class="t t-en" lang="en">About</span></h2>
+<div class="about-grid">
+<figure>
+<svg xmlns="http://www.w3.org/2000/svg" class="tile lemon" viewBox="0 0 200 400" aria-hidden="true" focusable="false">
+<path d="M16.00 384.00L16.00 150.00A82 82 0 0 1 184 150L184.00 384.00Z" fill="#fffcf7" stroke="#e0b44a" stroke-width="7.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24.00 384.00L24.00 154.00A74 74 0 0 1 176 154L176.00 384.00" fill="none" stroke="#1e4f96" stroke-width="2.20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M100.00 372.00C96.00 300.00 108.00 240.00 100.00 168.00" fill="none" stroke="#7a4e2d" stroke-width="13.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M100.00 250.00C70.00 236.00 46.00 210.00 34.00 176.00" fill="none" stroke="#7a4e2d" stroke-width="5.50" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M98.00 210.00C72.00 188.00 50.00 156.00 36.00 122.00" fill="none" stroke="#7a4e2d" stroke-width="6.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M104.00 196.00C138.00 176.00 162.00 146.00 176.00 104.00" fill="none" stroke="#7a4e2d" stroke-width="6.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M102.00 230.00C140.00 220.00 164.00 200.00 176.00 168.00" fill="none" stroke="#7a4e2d" stroke-width="5.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M100.00 168.00C88.00 130.00 112.00 96.00 100.00 62.00" fill="none" stroke="#5c3a22" stroke-width="5.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M100.00 150.00C78.00 120.00 70.00 90.00 86.00 58.00" fill="none" stroke="#7a4e2d" stroke-width="3.50" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M104.00 142.00C130.00 118.00 150.00 96.00 142.00 64.00" fill="none" stroke="#7a4e2d" stroke-width="3.50" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="102.00" cy="48.00" rx="18.00" ry="7.50" transform="rotate(-18.0 102.00 48.00)" fill="#3e8c45"/>
+<ellipse cx="102.00" cy="48.00" rx="9.90" ry="3.38" transform="rotate(-18.0 102.00 48.00)" fill="#7cb342"/>
+<ellipse cx="76.00" cy="58.00" rx="16.00" ry="6.50" transform="rotate(32.0 76.00 58.00)" fill="#3e8c45"/>
+<ellipse cx="76.00" cy="58.00" rx="8.80" ry="2.92" transform="rotate(32.0 76.00 58.00)" fill="#7cb342"/>
+<ellipse cx="128.00" cy="56.00" rx="17.00" ry="7.00" transform="rotate(-36.0 128.00 56.00)" fill="#3e8c45"/>
+<ellipse cx="128.00" cy="56.00" rx="9.35" ry="3.15" transform="rotate(-36.0 128.00 56.00)" fill="#7cb342"/>
+<ellipse cx="54.00" cy="78.00" rx="15.00" ry="6.00" transform="rotate(18.0 54.00 78.00)" fill="#3e8c45"/>
+<ellipse cx="54.00" cy="78.00" rx="8.25" ry="2.70" transform="rotate(18.0 54.00 78.00)" fill="#7cb342"/>
+<ellipse cx="148.00" cy="76.00" rx="16.00" ry="6.50" transform="rotate(-28.0 148.00 76.00)" fill="#3e8c45"/>
+<ellipse cx="148.00" cy="76.00" rx="8.80" ry="2.92" transform="rotate(-28.0 148.00 76.00)" fill="#7cb342"/>
+<ellipse cx="92.00" cy="74.00" rx="14.00" ry="5.50" transform="rotate(58.0 92.00 74.00)" fill="#3e8c45"/>
+<ellipse cx="92.00" cy="74.00" rx="7.70" ry="2.47" transform="rotate(58.0 92.00 74.00)" fill="#7cb342"/>
+<ellipse cx="116.00" cy="86.00" rx="15.00" ry="6.00" transform="rotate(-8.0 116.00 86.00)" fill="#3e8c45"/>
+<ellipse cx="116.00" cy="86.00" rx="8.25" ry="2.70" transform="rotate(-8.0 116.00 86.00)" fill="#7cb342"/>
+<ellipse cx="38.00" cy="104.00" rx="14.00" ry="5.50" transform="rotate(40.0 38.00 104.00)" fill="#3e8c45"/>
+<ellipse cx="38.00" cy="104.00" rx="7.70" ry="2.47" transform="rotate(40.0 38.00 104.00)" fill="#7cb342"/>
+<ellipse cx="164.00" cy="102.00" rx="15.00" ry="6.00" transform="rotate(-48.0 164.00 102.00)" fill="#3e8c45"/>
+<ellipse cx="164.00" cy="102.00" rx="8.25" ry="2.70" transform="rotate(-48.0 164.00 102.00)" fill="#7cb342"/>
+<ellipse cx="68.00" cy="108.00" rx="16.00" ry="6.50" transform="rotate(-16.0 68.00 108.00)" fill="#3e8c45"/>
+<ellipse cx="68.00" cy="108.00" rx="8.80" ry="2.92" transform="rotate(-16.0 68.00 108.00)" fill="#7cb342"/>
+<ellipse cx="132.00" cy="112.00" rx="14.00" ry="5.50" transform="rotate(24.0 132.00 112.00)" fill="#3e8c45"/>
+<ellipse cx="132.00" cy="112.00" rx="7.70" ry="2.47" transform="rotate(24.0 132.00 112.00)" fill="#7cb342"/>
+<ellipse cx="100.00" cy="108.00" rx="12.00" ry="5.00" transform="rotate(70.0 100.00 108.00)" fill="#3e8c45"/>
+<ellipse cx="100.00" cy="108.00" rx="6.60" ry="2.25" transform="rotate(70.0 100.00 108.00)" fill="#7cb342"/>
+<ellipse cx="46.00" cy="132.00" rx="14.00" ry="5.50" transform="rotate(12.0 46.00 132.00)" fill="#3e8c45"/>
+<ellipse cx="46.00" cy="132.00" rx="7.70" ry="2.47" transform="rotate(12.0 46.00 132.00)" fill="#7cb342"/>
+<ellipse cx="156.00" cy="134.00" rx="15.00" ry="6.00" transform="rotate(-32.0 156.00 134.00)" fill="#3e8c45"/>
+<ellipse cx="156.00" cy="134.00" rx="8.25" ry="2.70" transform="rotate(-32.0 156.00 134.00)" fill="#7cb342"/>
+<ellipse cx="84.00" cy="136.00" rx="13.00" ry="5.00" transform="rotate(46.0 84.00 136.00)" fill="#3e8c45"/>
+<ellipse cx="84.00" cy="136.00" rx="7.15" ry="2.25" transform="rotate(46.0 84.00 136.00)" fill="#7cb342"/>
+<ellipse cx="120.00" cy="146.00" rx="13.00" ry="5.00" transform="rotate(-22.0 120.00 146.00)" fill="#3e8c45"/>
+<ellipse cx="120.00" cy="146.00" rx="7.15" ry="2.25" transform="rotate(-22.0 120.00 146.00)" fill="#7cb342"/>
+<ellipse cx="60.00" cy="158.00" rx="14.00" ry="5.50" transform="rotate(8.0 60.00 158.00)" fill="#3e8c45"/>
+<ellipse cx="60.00" cy="158.00" rx="7.70" ry="2.47" transform="rotate(8.0 60.00 158.00)" fill="#7cb342"/>
+<ellipse cx="146.00" cy="162.00" rx="13.00" ry="5.00" transform="rotate(-38.0 146.00 162.00)" fill="#3e8c45"/>
+<ellipse cx="146.00" cy="162.00" rx="7.15" ry="2.25" transform="rotate(-38.0 146.00 162.00)" fill="#7cb342"/>
+<ellipse cx="104.00" cy="166.00" rx="12.00" ry="5.00" transform="rotate(52.0 104.00 166.00)" fill="#3e8c45"/>
+<ellipse cx="104.00" cy="166.00" rx="6.60" ry="2.25" transform="rotate(52.0 104.00 166.00)" fill="#7cb342"/>
+<ellipse cx="32.00" cy="176.00" rx="12.00" ry="5.00" transform="rotate(28.0 32.00 176.00)" fill="#3e8c45"/>
+<ellipse cx="32.00" cy="176.00" rx="6.60" ry="2.25" transform="rotate(28.0 32.00 176.00)" fill="#7cb342"/>
+<ellipse cx="172.00" cy="150.00" rx="12.00" ry="5.00" transform="rotate(-14.0 172.00 150.00)" fill="#3e8c45"/>
+<ellipse cx="172.00" cy="150.00" rx="6.60" ry="2.25" transform="rotate(-14.0 172.00 150.00)" fill="#7cb342"/>
+<ellipse cx="74.00" cy="188.00" rx="13.00" ry="5.00" transform="rotate(-42.0 74.00 188.00)" fill="#3e8c45"/>
+<ellipse cx="74.00" cy="188.00" rx="7.15" ry="2.25" transform="rotate(-42.0 74.00 188.00)" fill="#7cb342"/>
+<ellipse cx="136.00" cy="196.00" rx="12.00" ry="5.00" transform="rotate(18.0 136.00 196.00)" fill="#3e8c45"/>
+<ellipse cx="136.00" cy="196.00" rx="6.60" ry="2.25" transform="rotate(18.0 136.00 196.00)" fill="#7cb342"/>
+<ellipse cx="96.00" cy="196.00" rx="11.00" ry="4.50" transform="rotate(24.0 96.00 196.00)" fill="#3e8c45"/>
+<ellipse cx="96.00" cy="196.00" rx="6.05" ry="2.02" transform="rotate(24.0 96.00 196.00)" fill="#7cb342"/>
+<ellipse cx="118.00" cy="208.00" rx="12.00" ry="5.00" transform="rotate(-30.0 118.00 208.00)" fill="#3e8c45"/>
+<ellipse cx="118.00" cy="208.00" rx="6.60" ry="2.25" transform="rotate(-30.0 118.00 208.00)" fill="#7cb342"/>
+<ellipse cx="52.00" cy="206.00" rx="11.00" ry="4.50" transform="rotate(16.0 52.00 206.00)" fill="#3e8c45"/>
+<ellipse cx="52.00" cy="206.00" rx="6.05" ry="2.02" transform="rotate(16.0 52.00 206.00)" fill="#7cb342"/>
+<circle cx="72.00" cy="72.00" r="11.00" fill="#f0c93a" stroke="#e0b422" stroke-width="0.80"/>
+<circle cx="68.92" cy="68.48" r="3.08" fill="#fff4d6"/>
+<ellipse cx="72.00" cy="59.80" rx="3.20" ry="1.60" transform="rotate(-20.0 72.00 59.80)" fill="#3e8c45"/>
+<circle cx="130.00" cy="70.00" r="12.00" fill="#f0c93a" stroke="#e0b422" stroke-width="0.80"/>
+<circle cx="126.64" cy="66.16" r="3.36" fill="#fff4d6"/>
+<ellipse cx="130.00" cy="56.80" rx="3.20" ry="1.60" transform="rotate(-20.0 130.00 56.80)" fill="#3e8c45"/>
+<circle cx="98.00" cy="96.00" r="10.00" fill="#f0c93a" stroke="#e0b422" stroke-width="0.80"/>
+<circle cx="95.20" cy="92.80" r="2.80" fill="#fff4d6"/>
+<ellipse cx="98.00" cy="84.80" rx="3.20" ry="1.60" transform="rotate(-20.0 98.00 84.80)" fill="#3e8c45"/>
+<circle cx="50.00" cy="118.00" r="11.00" fill="#f0c93a" stroke="#e0b422" stroke-width="0.80"/>
+<circle cx="46.92" cy="114.48" r="3.08" fill="#fff4d6"/>
+<ellipse cx="50.00" cy="105.80" rx="3.20" ry="1.60" transform="rotate(-20.0 50.00 105.80)" fill="#3e8c45"/>
+<circle cx="158.00" cy="118.00" r="12.00" fill="#f0c93a" stroke="#e0b422" stroke-width="0.80"/>
+<circle cx="154.64" cy="114.16" r="3.36" fill="#fff4d6"/>
+<ellipse cx="158.00" cy="104.80" rx="3.20" ry="1.60" transform="rotate(-20.0 158.00 104.80)" fill="#3e8c45"/>
+<circle cx="112.00" cy="132.00" r="10.50" fill="#f0c93a" stroke="#e0b422" stroke-width="0.80"/>
+<circle cx="109.06" cy="128.64" r="2.94" fill="#fff4d6"/>
+<ellipse cx="112.00" cy="120.30" rx="3.20" ry="1.60" transform="rotate(-20.0 112.00 120.30)" fill="#3e8c45"/>
+<circle cx="78.00" cy="176.00" r="10.00" fill="#f0c93a" stroke="#e0b422" stroke-width="0.80"/>
+<circle cx="75.20" cy="172.80" r="2.80" fill="#fff4d6"/>
+<ellipse cx="78.00" cy="164.80" rx="3.20" ry="1.60" transform="rotate(-20.0 78.00 164.80)" fill="#3e8c45"/>
+<circle cx="148.00" cy="178.00" r="11.00" fill="#f0c93a" stroke="#e0b422" stroke-width="0.80"/>
+<circle cx="144.92" cy="174.48" r="3.08" fill="#fff4d6"/>
+<ellipse cx="148.00" cy="165.80" rx="3.20" ry="1.60" transform="rotate(-20.0 148.00 165.80)" fill="#3e8c45"/>
+<circle cx="104.00" cy="214.00" r="9.50" fill="#f0c93a" stroke="#e0b422" stroke-width="0.80"/>
+<circle cx="101.34" cy="210.96" r="2.66" fill="#fff4d6"/>
+<ellipse cx="104.00" cy="203.30" rx="3.20" ry="1.60" transform="rotate(-20.0 104.00 203.30)" fill="#3e8c45"/>
+<path d="M70.00 236.00Q96.00 228.00 118.00 240.00" fill="none" stroke="#7a4e2d" stroke-width="3.20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M112.00 276.00Q140.00 268.00 162.00 286.00" fill="none" stroke="#7a4e2d" stroke-width="3.00" stroke-linecap="round" stroke-linejoin="round"/>
+<g transform="translate(76.00 228.00) scale(1.15 1.15)">
+<path d="M-18.00 2.00Q-28.00 -2.00 -34.00 4.00Q-26.00 6.00 -16.00 6.00Z" fill="#f7f4ee"/>
+<ellipse cx="0.00" cy="0.00" rx="16.00" ry="7.20" fill="#f7f4ee" stroke="#8d939c" stroke-width="1.50"/>
+<circle cx="14.00" cy="-5.00" r="6.20" fill="#f7f4ee" stroke="#8d939c" stroke-width="1.50"/>
+<path d="M2.00 -1.00Q-6.00 -16.00 10.00 -5.00Q4.00 -8.00 2.00 -1.00Z" fill="#c5d4ec" stroke="#8d939c" stroke-width="1.20" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="16.20" cy="-6.20" r="1.15" fill="#1a2744"/>
+<path d="M19.00 -4.00L25.00 -2.60L19.20 -1.40Z" fill="#c4a15a"/>
+</g>
+<g transform="translate(132.00 270.00) scale(-1.08 1.08)">
+<path d="M-18.00 2.00Q-28.00 -2.00 -34.00 4.00Q-26.00 6.00 -16.00 6.00Z" fill="#f7f4ee"/>
+<ellipse cx="0.00" cy="0.00" rx="16.00" ry="7.20" fill="#f7f4ee" stroke="#8d939c" stroke-width="1.50"/>
+<circle cx="14.00" cy="-5.00" r="6.20" fill="#f7f4ee" stroke="#8d939c" stroke-width="1.50"/>
+<path d="M2.00 -1.00Q-6.00 -16.00 10.00 -5.00Q4.00 -8.00 2.00 -1.00Z" fill="#c5d4ec" stroke="#8d939c" stroke-width="1.20" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="16.20" cy="-6.20" r="1.15" fill="#1a2744"/>
+<path d="M19.00 -4.00L25.00 -2.60L19.20 -1.40Z" fill="#c4a15a"/>
+</g>
+<ellipse cx="100.00" cy="368.00" rx="72.00" ry="9.00" fill="#2f6b38"/>
+<ellipse cx="46.00" cy="360.00" rx="8.00" ry="3.20" transform="rotate(-30.0 46.00 360.00)" fill="#3e8c45"/>
+<ellipse cx="54.00" cy="364.00" rx="7.00" ry="2.80" transform="rotate(20.0 54.00 364.00)" fill="#7cb342"/>
+<ellipse cx="150.00" cy="362.00" rx="8.00" ry="3.00" transform="rotate(24.0 150.00 362.00)" fill="#3e8c45"/>
+<ellipse cx="158.00" cy="366.00" rx="6.50" ry="2.60" transform="rotate(-18.0 158.00 366.00)" fill="#7cb342"/>
+<g stroke="#d5d0c8" stroke-width="2" opacity="0.55">
+<path d="M16 120H184M16 210H184M16 300H184M100 20V384"/>
+</g>
+</svg>
+<figcaption class="visually-hidden"><span class="t t-de" lang="de">Zitronenbaum mit weißen Tauben, wie auf den Hauskacheln</span><span class="t t-en" lang="en">Lemon tree with white doves, like the tiles on the house</span></figcaption></figure>
+<div>
+<!-- PLACEHOLDER: Von Cordula zu ersetzen. -->
+<p class="ph"><span class="t t-de" lang="de">Cordula Dobos bietet spirituelle Energetik in ruhiger, achtsamer Atmosphäre. Diese Sätze sind ein Platzhalter und werden von ihr selbst ersetzt.</span><span class="t t-en" lang="en">Cordula Dobos offers spiritual energetics in a quiet, attentive atmosphere. These sentences are a placeholder and will be replaced by her own words.</span></p>
+</div></div></section>
+<section id="angebot">
+<h2><span class="t t-de" lang="de">Angebot</span><span class="t t-en" lang="en">Offerings</span></h2>
+<!-- PLACEHOLDER: Von Cordula zu ersetzen. -->
+<p class="ph"><span class="t t-de" lang="de">Zwei Wege, wie Cordula begleitet. Die Beschreibungen sind ein Platzhalter.</span><span class="t t-en" lang="en">Two ways Cordula accompanies people. The descriptions are placeholders.</span></p>
+<div class="cards">
+<article class="card">
+<h3><span class="t t-de" lang="de">Heilungen</span><span class="t t-en" lang="en">Healings</span></h3>
+<!-- PLACEHOLDER: Von Cordula zu ersetzen. -->
+<p class="ph"><span class="t t-de" lang="de">Ein stiller Raum für energetische Heilbegleitung. Cordula beschreibt hier selbst, was Menschen erwartet.</span><span class="t t-en" lang="en">A quiet space for energetic support. Cordula will describe in her own words what to expect.</span></p>
+</article>
+<article class="card">
+<h3><span class="t t-de" lang="de">Besetzungen</span><span class="t t-en" lang="en">Attachments</span></h3>
+<!-- PLACEHOLDER: Von Cordula zu ersetzen. -->
+<p class="ph"><span class="t t-de" lang="de">Behutsame Begleitung, wenn sich etwas belastend oder fremd anfühlt. Die eigenen Worte von Cordula folgen hier.</span><span class="t t-en" lang="en">Gentle company when something feels heavy or unfamiliar. Cordula's own words will follow here.</span></p>
+</article></div>
+<figure>
+<svg xmlns="http://www.w3.org/2000/svg" class="tile birds" viewBox="0 0 320 150" aria-hidden="true" focusable="false">
+<ellipse cx="160.00" cy="75.00" rx="150.00" ry="64.00" fill="#fffcf7" stroke="#1e4f96" stroke-width="8.00"/>
+<ellipse cx="160.00" cy="75.00" rx="138.00" ry="52.00" fill="none" stroke="#1e4f96" stroke-width="1.50"/>
+<path d="M36.00 96.00C80.00 70.00 120.00 88.00 156.00 64.00" fill="none" stroke="#1e4f96" stroke-width="5.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M150.00 70.00C190.00 46.00 230.00 58.00 286.00 40.00" fill="none" stroke="#1e4f96" stroke-width="4.50" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M70.00 108.00C110.00 120.00 150.00 100.00 196.00 112.00" fill="none" stroke="#14386e" stroke-width="3.50" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="76.00" cy="71.46" r="3.20" fill="#f0c93a" stroke="#e0b422" stroke-width="0.40"/>
+<circle cx="82.00" cy="75.46" r="2.60" fill="#f0c93a"/>
+<circle cx="104.00" cy="72.55" r="3.20" fill="#f0c93a" stroke="#e0b422" stroke-width="0.40"/>
+<circle cx="110.00" cy="76.55" r="2.60" fill="#f0c93a"/>
+<circle cx="132.00" cy="60.26" r="3.20" fill="#f0c93a" stroke="#e0b422" stroke-width="0.40"/>
+<circle cx="138.00" cy="64.26" r="2.60" fill="#f0c93a"/>
+<circle cx="160.00" cy="45.89" r="3.20" fill="#f0c93a" stroke="#e0b422" stroke-width="0.40"/>
+<circle cx="166.00" cy="49.89" r="2.60" fill="#f0c93a"/>
+<circle cx="188.00" cy="42.66" r="3.20" fill="#f0c93a" stroke="#e0b422" stroke-width="0.40"/>
+<circle cx="194.00" cy="46.66" r="2.60" fill="#f0c93a"/>
+<ellipse cx="54.00" cy="70.00" rx="10.00" ry="4.50" transform="rotate(30.0 54.00 70.00)" fill="#3e8c45"/>
+<ellipse cx="92.00" cy="84.00" rx="11.00" ry="4.50" transform="rotate(-20.0 92.00 84.00)" fill="#2f6b38"/>
+<ellipse cx="210.00" cy="48.00" rx="10.00" ry="4.20" transform="rotate(24.0 210.00 48.00)" fill="#7cb342"/>
+<ellipse cx="250.00" cy="56.00" rx="12.00" ry="5.00" transform="rotate(-30.0 250.00 56.00)" fill="#3e8c45"/>
+<ellipse cx="180.00" cy="100.00" rx="9.00" ry="4.00" transform="rotate(16.0 180.00 100.00)" fill="#2f6b38"/>
+<g transform="translate(108.00 78.00) scale(0.85 0.85)">
+<ellipse cx="0.00" cy="0.00" rx="18.00" ry="8.00" fill="#8d939c"/>
+<ellipse cx="-2.00" cy="1.00" rx="10.00" ry="5.50" fill="#f0c93a"/>
+<circle cx="16.00" cy="-4.00" r="6.40" fill="#1a2744"/>
+<circle cx="18.00" cy="-5.20" r="1.10" fill="#fffcf7"/>
+<path d="M20.00 -3.00L27.00 -1.20L20.00 0.40Z" fill="#c4a15a"/>
+<path d="M-4.00 -2.00Q-16.00 -16.00 -2.00 -6.00" fill="none" stroke="#1a2744" stroke-width="2.40" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-16.00 2.00Q-30.00 -4.00 -36.00 4.00" fill="none" stroke="#1a2744" stroke-width="2.20" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="-6.00" cy="8.00" rx="3.20" ry="1.40" fill="#c4a15a"/>
+</g>
+<g transform="translate(214.00 62.00) scale(-0.80 0.80)">
+<ellipse cx="0.00" cy="0.00" rx="18.00" ry="8.00" fill="#8d939c"/>
+<ellipse cx="-2.00" cy="1.00" rx="10.00" ry="5.50" fill="#f4d56a"/>
+<circle cx="16.00" cy="-4.00" r="6.40" fill="#1a2744"/>
+<circle cx="18.00" cy="-5.20" r="1.10" fill="#fffcf7"/>
+<path d="M20.00 -3.00L27.00 -1.20L20.00 0.40Z" fill="#c4a15a"/>
+<path d="M-4.00 -2.00Q-16.00 -16.00 -2.00 -6.00" fill="none" stroke="#1a2744" stroke-width="2.40" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-16.00 2.00Q-30.00 -4.00 -36.00 4.00" fill="none" stroke="#1a2744" stroke-width="2.20" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="-6.00" cy="8.00" rx="3.20" ry="1.40" fill="#c4a15a"/>
+</g>
+</svg>
+<figcaption class="visually-hidden"><span class="t t-de" lang="de">Vögel auf blauen Zweigen, wie auf den Hauskacheln</span><span class="t t-en" lang="en">Birds on blue branches, like the tiles on the house</span></figcaption></figure>
+</section>
+<section id="kontakt">
+<h2><span class="t t-de" lang="de">Kontakt</span><span class="t t-en" lang="en">Contact</span></h2>
+<div class="contact-grid">
+<div>
+<!-- PLACEHOLDER: Von Cordula zu ersetzen. -->
+<p class="ph"><span class="t t-de" lang="de">Für eine Terminvereinbarung genügt ein Anruf. Weitere Hinweise trägt Cordula hier ein.</span><span class="t t-en" lang="en">A phone call is enough to arrange a time. Cordula will add any further notes here.</span></p>
+<p class="tel-line call"><span class="t t-de" lang="de">Tel. Vereinbarung: </span><span class="t t-en" lang="en">Tel. by appointment: </span><a class="tel" href="tel:+4987114230600">0871 / 14230600</a><span class="t t-de" lang="de"> (AB)</span><span class="t t-en" lang="en"> (voicemail)</span></p>
+</div>
+<figure>
+<svg xmlns="http://www.w3.org/2000/svg" class="tile vase" viewBox="0 0 200 250" aria-hidden="true" focusable="false">
+<rect x="4" y="4" width="192" height="242" fill="#fffcf7" stroke="#1e4f96" stroke-width="6"/>
+<rect x="12" y="12" width="176" height="226" fill="none" stroke="#1e4f96" stroke-width="1.4"/>
+<path d="M100.00 128.00C78.00 118.00 60.00 132.00 48.00 108.00" fill="none" stroke="#2f6b38" stroke-width="2.20" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="46.00" cy="100.00" rx="12.00" ry="5.00" transform="rotate(-40.0 46.00 100.00)" fill="#3e8c45"/>
+<ellipse cx="62.00" cy="118.00" rx="11.00" ry="4.50" transform="rotate(30.0 62.00 118.00)" fill="#2f6b38"/>
+<ellipse cx="150.00" cy="96.00" rx="14.00" ry="5.50" transform="rotate(36.0 150.00 96.00)" fill="#3e8c45"/>
+<ellipse cx="132.00" cy="112.00" rx="10.00" ry="4.20" transform="rotate(-24.0 132.00 112.00)" fill="#7cb342"/>
+<ellipse cx="108.00" cy="124.00" rx="12.00" ry="4.80" transform="rotate(10.0 108.00 124.00)" fill="#2f6b38"/>
+<circle cx="64.00" cy="68.08" r="7.68" fill="#e36a2c"/>
+<circle cx="72.59" cy="73.04" r="7.68" fill="#e36a2c"/>
+<circle cx="72.59" cy="82.96" r="7.68" fill="#e36a2c"/>
+<circle cx="64.00" cy="87.92" r="7.68" fill="#e36a2c"/>
+<circle cx="55.41" cy="82.96" r="7.68" fill="#e36a2c"/>
+<circle cx="55.41" cy="73.04" r="7.68" fill="#e36a2c"/>
+<circle cx="64.00" cy="78.00" r="6.08" fill="#f2d15a" stroke="#5c3a22" stroke-width="0.40"/>
+<circle cx="108.00" cy="40.84" r="8.64" fill="#d2453a"/>
+<circle cx="116.73" cy="45.04" r="8.64" fill="#d2453a"/>
+<circle cx="118.88" cy="54.48" r="8.64" fill="#d2453a"/>
+<circle cx="112.84" cy="62.05" r="8.64" fill="#d2453a"/>
+<circle cx="103.16" cy="62.05" r="8.64" fill="#d2453a"/>
+<circle cx="97.12" cy="54.48" r="8.64" fill="#d2453a"/>
+<circle cx="99.27" cy="45.04" r="8.64" fill="#d2453a"/>
+<circle cx="108.00" cy="52.00" r="6.84" fill="#f2d15a" stroke="#5c3a22" stroke-width="0.40"/>
+<circle cx="148.00" cy="64.70" r="7.20" fill="#2a62b0"/>
+<circle cx="156.05" cy="69.35" r="7.20" fill="#2a62b0"/>
+<circle cx="156.05" cy="78.65" r="7.20" fill="#2a62b0"/>
+<circle cx="148.00" cy="83.30" r="7.20" fill="#2a62b0"/>
+<circle cx="139.95" cy="78.65" r="7.20" fill="#2a62b0"/>
+<circle cx="139.95" cy="69.35" r="7.20" fill="#2a62b0"/>
+<circle cx="148.00" cy="74.00" r="5.70" fill="#fffcf7" stroke="#5c3a22" stroke-width="0.40"/>
+<circle cx="86.00" cy="101.18" r="5.28" fill="#7a4e86"/>
+<circle cx="92.49" cy="105.89" r="5.28" fill="#7a4e86"/>
+<circle cx="90.01" cy="113.52" r="5.28" fill="#7a4e86"/>
+<circle cx="81.99" cy="113.52" r="5.28" fill="#7a4e86"/>
+<circle cx="79.51" cy="105.89" r="5.28" fill="#7a4e86"/>
+<circle cx="86.00" cy="108.00" r="4.18" fill="#f2d15a" stroke="#5c3a22" stroke-width="0.40"/>
+<circle cx="138.00" cy="104.56" r="5.76" fill="#e36a2c"/>
+<circle cx="144.44" cy="108.28" r="5.76" fill="#e36a2c"/>
+<circle cx="144.44" cy="115.72" r="5.76" fill="#e36a2c"/>
+<circle cx="138.00" cy="119.44" r="5.76" fill="#e36a2c"/>
+<circle cx="131.56" cy="115.72" r="5.76" fill="#e36a2c"/>
+<circle cx="131.56" cy="108.28" r="5.76" fill="#e36a2c"/>
+<circle cx="138.00" cy="112.00" r="4.56" fill="#f2d15a" stroke="#5c3a22" stroke-width="0.40"/>
+<path d="M70.00 148.00C40.00 148.00 32.00 168.00 38.00 176.00C46.00 186.00 58.00 178.00 64.00 170.00L70.00 206.00C72.00 224.00 128.00 224.00 130.00 206.00L136.00 170.00C142.00 178.00 154.00 186.00 162.00 176.00C168.00 168.00 160.00 148.00 130.00 148.00L124.00 136.00L76.00 136.00Z" fill="#1e4f96" stroke="#14386e" stroke-width="1.20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M78.00 154.00Q100.00 164.00 122.00 154.00" fill="none" stroke="#fffcf7" stroke-width="2.40" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M84.00 168.00Q100.00 176.00 116.00 168.00" fill="none" stroke="#c5d4ec" stroke-width="2.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M76.00 222.00L68.00 234.00L132.00 234.00L124.00 222.00Z" fill="#14386e"/>
+<path d="M90.00 228.00Q100.00 222.00 110.00 228.00" fill="none" stroke="#f4d56a" stroke-width="1.20" stroke-linecap="round" stroke-linejoin="round"/>
+<g fill="#1e4f96" opacity="0.9">
+<path d="M18 28c8 6 8 14 0 18c-6-8 0-14 0-18z"/>
+<path d="M182 28c-8 6-8 14 0 18c6-8 0-14 0-18z"/>
+<path d="M18 214c8-6 8-14 0-18c-6 8 0 14 0 18z"/>
+<path d="M182 214c-8-6-8-14 0-18c6 8 0 14 0 18z"/>
+</g>
+</svg>
+<figcaption class="visually-hidden"><span class="t t-de" lang="de">Blumenvase im Talavera-Stil</span><span class="t t-en" lang="en">Flower vase in the Talavera style</span></figcaption></figure>
+</div></section>
+</main>
+<footer>
+<svg xmlns="http://www.w3.org/2000/svg" class="azulejo-rule" viewBox="0 0 360 26" aria-hidden="true" focusable="false">
+<path d="M14.00 13.00L22.00 4.00L30.00 13.00L22.00 22.00Z" fill="none" stroke="#1e4f96" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="22.00" cy="13.00" r="1.70" fill="#7a2240"/>
+<path d="M54.00 13.00L62.00 4.00L70.00 13.00L62.00 22.00Z" fill="none" stroke="#1e4f96" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="62.00" cy="13.00" r="1.50" fill="#3e8c45"/>
+<path d="M94.00 13.00L102.00 4.00L110.00 13.00L102.00 22.00Z" fill="none" stroke="#1e4f96" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="102.00" cy="13.00" r="1.70" fill="#7a2240"/>
+<path d="M134.00 13.00L142.00 4.00L150.00 13.00L142.00 22.00Z" fill="none" stroke="#1e4f96" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="142.00" cy="13.00" r="1.50" fill="#3e8c45"/>
+<path d="M174.00 13.00L182.00 4.00L190.00 13.00L182.00 22.00Z" fill="none" stroke="#1e4f96" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="182.00" cy="13.00" r="1.70" fill="#7a2240"/>
+<path d="M214.00 13.00L222.00 4.00L230.00 13.00L222.00 22.00Z" fill="none" stroke="#1e4f96" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="222.00" cy="13.00" r="1.50" fill="#3e8c45"/>
+<path d="M254.00 13.00L262.00 4.00L270.00 13.00L262.00 22.00Z" fill="none" stroke="#1e4f96" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="262.00" cy="13.00" r="1.70" fill="#7a2240"/>
+<path d="M294.00 13.00L302.00 4.00L310.00 13.00L302.00 22.00Z" fill="none" stroke="#1e4f96" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="302.00" cy="13.00" r="1.50" fill="#3e8c45"/>
+<path d="M334.00 13.00L342.00 4.00L350.00 13.00L342.00 22.00Z" fill="none" stroke="#1e4f96" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="342.00" cy="13.00" r="1.70" fill="#7a2240"/>
+</svg>
+<figure>
+<svg xmlns="http://www.w3.org/2000/svg" class="casa" viewBox="0 0 260 176" aria-hidden="true" focusable="false">
+<rect width="260" height="176" rx="6" fill="#d9d3cc"/>
+<circle cx="45.00" cy="29.00" r="4.00" fill="#fbfaf6"/>
+<circle cx="82.00" cy="48.00" r="5.00" fill="#fbfaf6"/>
+<circle cx="119.00" cy="67.00" r="6.00" fill="#b7b0a6"/>
+<circle cx="156.00" cy="86.00" r="3.00" fill="#fbfaf6"/>
+<circle cx="193.00" cy="105.00" r="4.00" fill="#fbfaf6"/>
+<circle cx="230.00" cy="124.00" r="5.00" fill="#b7b0a6"/>
+<circle cx="27.00" cy="143.00" r="6.00" fill="#fbfaf6"/>
+<circle cx="64.00" cy="12.00" r="3.00" fill="#fbfaf6"/>
+<circle cx="101.00" cy="31.00" r="4.00" fill="#b7b0a6"/>
+<circle cx="138.00" cy="50.00" r="5.00" fill="#fbfaf6"/>
+<circle cx="175.00" cy="69.00" r="6.00" fill="#fbfaf6"/>
+<circle cx="212.00" cy="88.00" r="3.00" fill="#b7b0a6"/>
+<circle cx="9.00" cy="107.00" r="4.00" fill="#fbfaf6"/>
+<circle cx="46.00" cy="126.00" r="5.00" fill="#fbfaf6"/>
+<circle cx="83.00" cy="145.00" r="6.00" fill="#b7b0a6"/>
+<circle cx="120.00" cy="14.00" r="3.00" fill="#fbfaf6"/>
+<circle cx="157.00" cy="33.00" r="4.00" fill="#fbfaf6"/>
+<circle cx="194.00" cy="52.00" r="5.00" fill="#b7b0a6"/>
+<circle cx="231.00" cy="71.00" r="6.00" fill="#fbfaf6"/>
+<circle cx="28.00" cy="90.00" r="3.00" fill="#fbfaf6"/>
+<circle cx="65.00" cy="109.00" r="4.00" fill="#b7b0a6"/>
+<circle cx="102.00" cy="128.00" r="5.00" fill="#fbfaf6"/>
+<circle cx="139.00" cy="147.00" r="6.00" fill="#fbfaf6"/>
+<circle cx="176.00" cy="16.00" r="3.00" fill="#b7b0a6"/>
+<circle cx="213.00" cy="35.00" r="4.00" fill="#fbfaf6"/>
+<circle cx="10.00" cy="54.00" r="5.00" fill="#fbfaf6"/>
+<circle cx="47.00" cy="73.00" r="6.00" fill="#b7b0a6"/>
+<circle cx="84.00" cy="92.00" r="3.00" fill="#fbfaf6"/>
+<circle cx="121.00" cy="111.00" r="4.00" fill="#fbfaf6"/>
+<circle cx="158.00" cy="130.00" r="5.00" fill="#b7b0a6"/>
+<circle cx="195.00" cy="149.00" r="6.00" fill="#fbfaf6"/>
+<circle cx="232.00" cy="18.00" r="3.00" fill="#fbfaf6"/>
+<circle cx="29.00" cy="37.00" r="4.00" fill="#b7b0a6"/>
+<circle cx="66.00" cy="56.00" r="5.00" fill="#fbfaf6"/>
+<circle cx="103.00" cy="75.00" r="6.00" fill="#fbfaf6"/>
+<circle cx="140.00" cy="94.00" r="3.00" fill="#b7b0a6"/>
+<circle cx="177.00" cy="113.00" r="4.00" fill="#fbfaf6"/>
+<circle cx="214.00" cy="132.00" r="5.00" fill="#fbfaf6"/>
+<circle cx="11.00" cy="151.00" r="6.00" fill="#b7b0a6"/>
+<circle cx="48.00" cy="20.00" r="3.00" fill="#fbfaf6"/>
+<circle cx="85.00" cy="39.00" r="4.00" fill="#fbfaf6"/>
+<circle cx="122.00" cy="58.00" r="5.00" fill="#b7b0a6"/>
+<circle cx="159.00" cy="77.00" r="6.00" fill="#fbfaf6"/>
+<circle cx="196.00" cy="96.00" r="3.00" fill="#fbfaf6"/>
+<circle cx="233.00" cy="115.00" r="4.00" fill="#b7b0a6"/>
+<circle cx="30.00" cy="134.00" r="5.00" fill="#fbfaf6"/>
+<circle cx="67.00" cy="153.00" r="6.00" fill="#fbfaf6"/>
+<circle cx="104.00" cy="22.00" r="3.00" fill="#b7b0a6"/>
+<g transform="translate(22.00 14.00)">
+<rect width="70" height="40" fill="#1e4f96"/>
+<circle cx="54.00" cy="12.00" r="6.00" fill="#f4d56a"/>
+<path d="M8.00 30.00L28.00 22.00L46.00 30.00Z" fill="#fffcf7"/>
+</g>
+<g transform="translate(96.00 14.00)">
+<rect width="70" height="40" fill="#e7a57c"/>
+<path d="M18.00 32.00L18.00 18.00L34.00 10.00L50.00 18.00L50.00 32.00Z" fill="#d2453a"/>
+<rect x="30" y="22" width="8" height="10" fill="#fbfaf6"/>
+</g>
+<g transform="translate(170.00 14.00)">
+<rect width="70" height="40" fill="#e36a2c"/>
+<circle cx="14.00" cy="12.00" r="5.00" fill="#f4d56a"/>
+<path d="M28.00 32.00L36.00 16.00L44.00 32.00Z" fill="#3e8c45"/>
+<rect x="48" y="20" width="12" height="12" fill="#fffcf7"/>
+</g>
+<rect x="48" y="62.00" width="164" height="28" rx="2" fill="#fffcf7" stroke="#1a2744" stroke-width="1.4"/>
+<rect x="48" y="96.00" width="164" height="28" rx="2" fill="#fffcf7" stroke="#1a2744" stroke-width="1.4"/>
+<rect x="48" y="130.00" width="164" height="28" rx="2" fill="#fffcf7" stroke="#1a2744" stroke-width="1.4"/>
+<text x="130" y="82" text-anchor="middle" fill="#1a2744" font-size="16" font-family="Palatino, Georgia, serif" letter-spacing="3">CASA</text>
+<text x="130" y="116" text-anchor="middle" fill="#1a2744" font-size="16" font-family="Palatino, Georgia, serif" letter-spacing="2">DOBOS</text>
+<text x="130" y="150" text-anchor="middle" fill="#1a2744" font-size="16" font-family="Palatino, Georgia, serif" letter-spacing="1">Nº10</text>
+</svg>
+<figcaption class="visually-hidden"><span class="t t-de" lang="de">Hausschild CASA DOBOS Nº10</span><span class="t t-en" lang="en">House sign CASA DOBOS Nº10</span></figcaption></figure>
+</footer>
+</div></div>
+<audio id="audio-splash" loop preload="none" src="audio/splash.mp3" aria-hidden="true"></audio>
+<audio id="audio-seite" loop preload="none" src="audio/seite.mp3" aria-hidden="true"></audio>
+<script>
+/* Laufzeit nur fuer Ton und Gecko. Konstanten: CFG aus dem Ada-Generator. */
+var CFG = {
+  audio: {
+    volume: 0.25,
+    crossfadeMs: 2400.0,
+    fadeInMs: 900.0
+  },
+  ids: {
+    splash: 'splash',
+    skip: 'skip',
+    sound: 'sound',
+    splashAudio: 'audio-splash',
+    pageAudio: 'audio-seite',
+    gecko: 'gecko'
+  },
+  cls: { on: 'is-on', muted: 'is-muted' },
+  anim: { hold: 'splash-hold' },
+  chime: {
+    partials: [1.00, 2.00, 2.76],
+    peak: 0.012,
+    floor: 0.00008,
+    attack: 0.020,
+    release: 2.10,
+    tail: 0.15,
+    map: [{sel:'a.nav-a', hz:494.0}, {sel:'label.flag', hz:392.0}, {sel:'a.tel', hz:330.0}, {sel:'.skip', hz:440.0}]
+  },
+  rustle: {
+    dur: 0.090,
+    freq: 1600.0,
+    q: 0.70,
+    gain: 0.012
+  },
+  gecko: {
+    cruise: 42.0,
+    dart: 138.0,
+    wanderFreq: 0.72,
+    wanderAmp: 0.95,
+    seekTurn: 0.85,
+    dartTurn: 1.15,
+    pullFar: 0.50,
+    pullNear: 0.28,
+    pullDist: 340.0,
+    orbitDist: 200.0,
+    orbitFlip: 0.045,
+    orbitSide: 0.50,
+    pauseRate: 0.042,
+    pauseMin: 800.0,
+    pauseMax: 2300.0,
+    dartRate: 0.11,
+    dartMin: 260.0,
+    dartMax: 480.0,
+    legAmp: 18.0,
+    legSlow: 8.2,
+    legFast: 15.5,
+    tailAmp: 11.0,
+    tailRest: 2.4,
+    tailFreq: 0.82,
+    bodyAmp: 2.5,
+    bodyRest: 0.7,
+    margin: 6.0,
+    startX: 18.0,
+    fromBottom: 120.0,
+    startHeading: -0.15,
+    maxDt: 0.05,
+    cssW: 132.0,
+    cssH: 63.0,
+    moveEps: 1.0,
+    tapHold: 3400.0,
+    tapDart: 460.0,
+    rustleGap: 2600.0,
+    tapRustle: 700.0,
+    avoidX: 78.0,
+    avoidY: 32.0,
+    avoidR: 120.0,
+    avoidTurn: 2.4,
+    tailSel: '.gecko-tail',
+    bodySel: '.gecko-body',
+    legSel: '.leg'
+  }
+};
+(function (CFG) {
+  'use strict';
+  var splash = document.getElementById(CFG.ids.splash);
+  var skip = document.getElementById(CFG.ids.skip);
+  var soundBtn = document.getElementById(CFG.ids.sound);
+  var splashAudio = document.getElementById(CFG.ids.splashAudio);
+  var pageAudio = document.getElementById(CFG.ids.pageAudio);
+  var gecko = document.getElementById(CFG.ids.gecko);
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var phase = reduce ? 'page' : 'splash';
+  var started = false;
+  var muted = false;
+  var left = reduce;
+  var splashOk = true;
+  var pageOk = true;
+  var fadeToken = 0;
+  var audioCtx = null;
+
+  function mark (audio, which) {
+    audio.addEventListener('error', function () {
+      if (which === 'splash') splashOk = false; else pageOk = false;
+    });
+  }
+  mark(splashAudio, 'splash');
+  mark(pageAudio, 'page');
+
+  function ctx() {
+    var AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) return null;
+    if (!audioCtx) audioCtx = new AC();
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+    return audioCtx;
+  }
+
+  function updateSound() {
+    soundBtn.classList.toggle(CFG.cls.on, started && !muted);
+    soundBtn.classList.toggle(CFG.cls.muted, muted);
+    soundBtn.setAttribute('aria-pressed', muted ? 'true' : 'false');
+  }
+
+  function safePlay(audio, which) {
+    try {
+      var pending = audio.play();
+      if (pending && pending.catch) {
+        pending.catch(function () {
+          if (which === 'splash') splashOk = false; else pageOk = false;
+        });
+      }
+    } catch (err) {
+      if (which === 'splash') splashOk = false; else pageOk = false;
+    }
+  }
+
+  function playSplash() {
+    if (!splashOk || muted || phase !== 'splash') return;
+    splashAudio.volume = CFG.audio.volume;
+    safePlay(splashAudio, 'splash');
+  }
+
+  function startPage(fromSplash) {
+    var token = ++fadeToken;
+    var vol = CFG.audio.volume;
+    if (!pageOk || muted) {
+      splashAudio.volume = 0;
+      pageAudio.volume = 0;
+      if (!pageOk) splashAudio.pause();
+      return;
+    }
+    if (fromSplash && splashOk && !splashAudio.paused) {
+      pageAudio.volume = 0;
+      safePlay(pageAudio, 'page');
+      var t0 = performance.now();
+      var ms = CFG.audio.crossfadeMs;
+      function step(now) {
+        if (token !== fadeToken) return;
+        var p = Math.min(1, (now - t0) / ms);
+        if (muted) {
+          splashAudio.volume = 0;
+          pageAudio.volume = 0;
+        } else {
+          splashAudio.volume = vol * (1 - p);
+          pageAudio.volume = vol * p;
+        }
+        if (p < 1) requestAnimationFrame(step);
+        else splashAudio.pause();
+      }
+      requestAnimationFrame(step);
+    } else {
+      splashAudio.pause();
+      pageAudio.volume = 0;
+      safePlay(pageAudio, 'page');
+      var t1 = performance.now();
+      var msIn = CFG.audio.fadeInMs;
+      function stepIn(now) {
+        if (token !== fadeToken) return;
+        var p = Math.min(1, (now - t1) / msIn);
+        pageAudio.volume = muted ? 0 : vol * p;
+        if (p < 1) requestAnimationFrame(stepIn);
+      }
+      requestAnimationFrame(stepIn);
+    }
+  }
+
+  function leaveSplash() {
+    if (left) return;
+    left = true;
+    var fromSplash = started && splashOk && !splashAudio.paused;
+    phase = 'page';
+    if (started) startPage(fromSplash);
+    startGecko();
+    updateSound();
+  }
+
+  splash.addEventListener('animationend', function (ev) {
+    if (ev.animationName !== CFG.anim.hold) return;
+    leaveSplash();
+  });
+
+  skip.addEventListener('change', function () {
+    if (!skip.checked) return;
+    started = true;
+    leaveSplash();
+  });
+
+  splash.addEventListener('click', function (ev) {
+    if (left) return;
+    if (ev.target.closest('.skip') || ev.target.closest('#' + CFG.ids.sound)) return;
+    started = true;
+    playSplash();
+    updateSound();
+  });
+
+  soundBtn.addEventListener('click', function (ev) {
+    ev.stopPropagation();
+    if (!started) {
+      started = true;
+      if (phase === 'splash') playSplash();
+      else startPage(false);
+      updateSound();
+      return;
+    }
+    muted = !muted;
+    fadeToken++;
+    var vol = CFG.audio.volume;
+    if (muted) {
+      splashAudio.volume = 0;
+      pageAudio.volume = 0;
+    } else if (phase === 'splash') {
+      splashAudio.volume = vol;
+      if (splashAudio.paused) safePlay(splashAudio, 'splash');
+    } else {
+      pageAudio.volume = vol;
+      if (pageAudio.paused) safePlay(pageAudio, 'page');
+    }
+    updateSound();
+  });
+
+  function tone(base) {
+    if (muted) return;
+    var ac = ctx();
+    if (!ac) return;
+    var now = ac.currentTime;
+    var spec = CFG.chime;
+    for (var i = 0; i < spec.partials.length; i++) {
+      var osc = ac.createOscillator();
+      var gain = ac.createGain();
+      osc.type = 'sine';
+      osc.frequency.value = base * spec.partials[i];
+      var peak = spec.peak / (i + 1);
+      gain.gain.setValueAtTime(spec.floor, now);
+      gain.gain.exponentialRampToValueAtTime(peak, now + spec.attack);
+      gain.gain.exponentialRampToValueAtTime(spec.floor, now + spec.release);
+      osc.connect(gain);
+      gain.connect(ac.destination);
+      osc.start(now);
+      osc.stop(now + spec.release + spec.tail);
+    }
+  }
+
+  document.addEventListener('click', function (ev) {
+    var map = CFG.chime.map;
+    for (var i = 0; i < map.length; i++) {
+      if (ev.target.closest(map[i].sel)) { tone(map[i].hz); return; }
+    }
+  });
+
+  function rustle() {
+    if (muted || !audioCtx) return;
+    var ac = audioCtx;
+    var spec = CFG.rustle;
+    var n = Math.floor(ac.sampleRate * spec.dur);
+    if (n < 2) return;
+    var buf = ac.createBuffer(1, n, ac.sampleRate);
+    var data = buf.getChannelData(0);
+    for (var i = 0; i < n; i++) {
+      var env = 1 - i / n;
+      data[i] = (Math.random() * 2 - 1) * env * env;
+    }
+    var src = ac.createBufferSource();
+    var filter = ac.createBiquadFilter();
+    var gain = ac.createGain();
+    src.buffer = buf;
+    filter.type = 'bandpass';
+    filter.frequency.value = spec.freq;
+    filter.Q.value = spec.q;
+    gain.gain.value = spec.gain;
+    src.connect(filter);
+    filter.connect(gain);
+    gain.connect(ac.destination);
+    src.start();
+  }
+
+  function turnTo(a, b, max) {
+    var d = Math.atan2(Math.sin(b - a), Math.cos(b - a));
+    if (d > max) d = max;
+    if (d < -max) d = -max;
+    return a + d;
+  }
+
+  function startGecko() {
+    if (reduce || !gecko || gecko.dataset.live === '1') return;
+    gecko.dataset.live = '1';
+    var G = CFG.gecko;
+    var gx = G.startX;
+    var gy = Math.max(G.margin, window.innerHeight - G.fromBottom);
+    var heading = G.startHeading;
+    var wander = 0;
+    var pauseUntil = 0;
+    var dartUntil = 0;
+    var orbit = 1;
+    var pointer = null;
+    var lastRustle = 0;
+    var legPhase = 0;
+    var last = performance.now();
+    var tail = gecko.querySelector(G.tailSel);
+    var body = gecko.querySelector(G.bodySel);
+    var legs = gecko.querySelectorAll(G.legSel);
+    var tailPx = tail ? +tail.getAttribute('data-px') : 0;
+    var tailPy = tail ? +tail.getAttribute('data-py') : 0;
+    var bodyPx = body ? +body.getAttribute('data-px') : 0;
+    var bodyPy = body ? +body.getAttribute('data-py') : 0;
+
+    window.addEventListener('pointermove', function (ev) {
+      if (ev.pointerType !== 'mouse') return;
+      pointer = { x: ev.clientX, y: ev.clientY, until: 0 };
+    }, { passive: true });
+
+    window.addEventListener('pointerdown', function (ev) {
+      if (ev.pointerType === 'mouse') return;
+      var now = performance.now();
+      pointer = { x: ev.clientX, y: ev.clientY, until: now + G.tapHold };
+      pauseUntil = 0;
+      dartUntil = now + G.tapDart;
+      if (now - lastRustle > G.tapRustle) { rustle(); lastRustle = now; }
+    }, { passive: true });
+
+    function frame(now) {
+      requestAnimationFrame(frame);
+      var dt = Math.min(G.maxDt, (now - last) / 1000);
+      last = now;
+      if (document.hidden) return;
+      if (pointer && pointer.until && now > pointer.until) pointer = null;
+
+      var speed = 0;
+      var darting = false;
+      if (now >= pauseUntil) {
+        if (now >= dartUntil && Math.random() < dt * G.dartRate) {
+          dartUntil = now + G.dartMin + Math.random() * (G.dartMax - G.dartMin);
+          if (now - lastRustle > G.rustleGap) { rustle(); lastRustle = now; }
+        }
+        darting = now < dartUntil;
+        if (!darting && Math.random() < dt * G.pauseRate) {
+          pauseUntil = now + G.pauseMin + Math.random() * (G.pauseMax - G.pauseMin);
+        } else {
+          speed = darting ? G.dart : G.cruise;
+          wander += dt * G.wanderFreq;
+          heading += Math.sin(wander) * G.wanderAmp * dt;
+          if (pointer) {
+            var rect = gecko.getBoundingClientRect();
+            var cx = rect.left + rect.width / 2;
+            var cy = rect.top + rect.height / 2;
+            var dx = pointer.x - cx;
+            var dy = pointer.y - cy;
+            var dist = Math.hypot(dx, dy) || 1;
+            var seek = Math.atan2(dy, dx);
+            var aim = dist < G.orbitDist ? seek + orbit * Math.PI * G.orbitSide : seek;
+            if (Math.random() < dt * G.orbitFlip) orbit = -orbit;
+            var pull = dist > G.pullDist ? G.pullFar : G.pullNear;
+            var cap = (darting ? G.dartTurn : G.seekTurn) * pull * dt;
+            heading = turnTo(heading, aim, cap);
+          }
+          var gw = gecko.offsetWidth || G.cssW;
+          var gh = gecko.offsetHeight || G.cssH;
+          var adx = gx + gw / 2 - (window.innerWidth - G.avoidX);
+          var ady = gy + gh / 2 - G.avoidY;
+          if (Math.hypot(adx, ady) < G.avoidR) {
+            heading = turnTo(heading, Math.atan2(ady, adx), G.avoidTurn * dt);
+          }
+          gx += Math.cos(heading) * speed * dt;
+          gy += Math.sin(heading) * speed * dt;
+          var m = G.margin;
+          if (gx < m) { gx = m; heading = Math.PI - heading; }
+          if (gy < m) { gy = m; heading = -heading; }
+          var maxX = window.innerWidth - gw - m;
+          var maxY = window.innerHeight - gh - m;
+          if (gx > maxX) { gx = maxX; heading = Math.PI - heading; }
+          if (gy > maxY) { gy = maxY; heading = -heading; }
+        }
+      }
+
+      var moving = speed > G.moveEps ? 1 : 0;
+      legPhase += dt * (darting ? G.legFast : G.legSlow) * moving;
+      if (tail) {
+        var ta = Math.sin(legPhase * G.tailFreq) * (G.tailRest + moving * G.tailAmp);
+        tail.setAttribute('transform', 'rotate(' + ta.toFixed(2) + ' ' + tailPx + ' ' + tailPy + ')');
+      }
+      if (body) {
+        var ba = Math.sin(legPhase) * (G.bodyRest + moving * G.bodyAmp);
+        body.setAttribute('transform', 'rotate(' + ba.toFixed(2) + ' ' + bodyPx + ' ' + bodyPy + ')');
+      }
+      for (var i = 0; i < legs.length; i++) {
+        var la = Math.sin(legPhase + (i % 2) * Math.PI) * G.legAmp * moving;
+        legs[i].setAttribute('transform', 'rotate(' + la.toFixed(2) + ' ' +
+          legs[i].getAttribute('data-x') + ' ' + legs[i].getAttribute('data-y') + ')');
+      }
+      var deg = heading * 180 / Math.PI;
+      gecko.style.transform = 'translate(' + gx.toFixed(1) + 'px,' + gy.toFixed(1) + 'px) rotate(' + deg.toFixed(2) + 'deg)';
+    }
+    requestAnimationFrame(frame);
+  }
+
+  updateSound();
+})(CFG);
+</script>
+</body>
+</html>
