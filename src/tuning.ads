@@ -7,6 +7,10 @@ package Tuning is
 
    Splash_Hold   : constant Float := 53.2;
    Splash_Fade   : constant Float := 2.24;
+
+   --  Sonne und Gecko: ausgeblendet unter dieser Breite und bei grobem
+   --  Zeiger (Telefon). Dieselbe Zahl steht in der CSS-Media-Query und in CFG.
+   Mobile_Max : constant Integer := 700;
    Header_Orbit  : constant Float := 50.0;
    Skip_Fade     : constant Float := 1.0;
 

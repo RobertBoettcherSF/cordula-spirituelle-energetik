@@ -31,6 +31,8 @@ package body Runtime is
       Line ("  },");
       Line ("  cls: { on: '" & Cls_On & "', muted: '" & Cls_Muted & "' },");
       Line ("  anim: { hold: '" & Anim_Hold & "' },");
+      Line ("  layout: { hideOrnaments: '(max-width: " & I (Mobile_Max) &
+            "px), (pointer: coarse)' },");
       Line ("  chime: {");
       Put ("    partials: [");
       for J in Chime_Partials'Range loop
@@ -125,6 +127,8 @@ package body Runtime is
       Line ("  var pageAudio = document.getElementById(CFG.ids.pageAudio);");
       Line ("  var gecko = document.getElementById(CFG.ids.gecko);");
       Line ("  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;");
+      Line ("  var hideOrnaments = window.matchMedia(CFG.layout.hideOrnaments);");
+      Line ("  function ornamentsOff() { return reduce || hideOrnaments.matches; }");
       Line ("  var phase = reduce ? 'page' : 'splash';");
       Line ("  var started = false;");
       Line ("  var muted = false;");
@@ -336,7 +340,7 @@ package body Runtime is
       Line ("  }");
       Line ("");
       Line ("  function startGecko() {");
-      Line ("    if (reduce || !gecko || gecko.dataset.live === '1') return;");
+      Line ("    if (ornamentsOff() || !gecko || gecko.dataset.live === '1') return;");
       Line ("    gecko.dataset.live = '1';");
       Line ("    var G = CFG.gecko;");
       Line ("    var gx = G.startX;");
@@ -373,6 +377,7 @@ package body Runtime is
       Line ("    }, { passive: true });");
       Line ("");
       Line ("    function frame(now) {");
+      Line ("      if (ornamentsOff()) { gecko.dataset.live = ''; return; }");
       Line ("      requestAnimationFrame(frame);");
       Line ("      var dt = Math.min(G.maxDt, (now - last) / 1000);");
       Line ("      last = now;");

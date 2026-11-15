@@ -293,8 +293,10 @@ package body Style is
       Css ("  @media (max-width: 640px) {");
       Css ("    .panel { margin: 4.3rem .45rem 1.2rem; border-radius: 120px 120px 10px 10px; padding: 1.15rem .75rem 1rem; }");
       Css ("    .plaque { width: min(24rem, calc(100% - 3.2rem)); margin-top: 1.35rem; }");
-      Css ("    .gecko { width: 104px; }");
       Css ("    .tools { top: .4rem; right: .4rem; }");
+      Css ("  }");
+      Css ("  @media (max-width: " & I (Mobile_Max) & "px), (pointer: coarse) {");
+      Css ("    .sun, .gecko { display: none; }");
       Css ("  }");
 
       Css ("  @media (prefers-reduced-motion: reduce) {");

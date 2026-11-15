@@ -27,7 +27,7 @@ gprbuild -p -P site.gpr
 
 `index.html` direkt im Browser öffnen. Für die Musik einen kleinen Webserver im Projektordner verwenden; manche Browser spielen keine lokalen Audiodateien über `file://`.
 
-Der Splash zeigt das Schild: senfgelber Grund, bordeauxrotes Unendlichzeichen. Ein goldener Punkt läuft einmal die Kurve entlang (etwa 53 Sekunden), danach blendet die Seite ein. „Überspringen / Skip“ beendet den Splash sofort. Bei `prefers-reduced-motion` erscheint die Seite ohne Animation, und der Gecko bleibt aus.
+Der Splash zeigt das Schild: senfgelber Grund, bordeauxrotes Unendlichzeichen. Ein goldener Punkt läuft einmal die Kurve entlang (etwa 53 Sekunden), danach blendet die Seite ein. „Überspringen / Skip“ beendet den Splash sofort. Bei `prefers-reduced-motion` erscheint die Seite ohne Animation, und der Gecko bleibt aus. Auf schmalen Fenstern (bis 700 px) und auf Telefonen bleibt auch die Sonne aus; der Gecko läuft dort nicht.
 
 Ein Tippen auf den Splash oder auf „Klang“ startet leise Musik (Lautstärke 0,25). Beim Wechsel auf die Seite wird von `audio/splash.mp3` nach `audio/seite.mp3` übergeblendet. Beide Stücke laufen in einer Schleife. Der Schalter schaltet auf Stumm. Fehlt eine Datei, bleibt die Seite benutzbar.
 

@@ -219,8 +219,10 @@ audio { display: none; }
   @media (max-width: 640px) {
     .panel { margin: 4.3rem .45rem 1.2rem; border-radius: 120px 120px 10px 10px; padding: 1.15rem .75rem 1rem; }
     .plaque { width: min(24rem, calc(100% - 3.2rem)); margin-top: 1.35rem; }
-    .gecko { width: 104px; }
     .tools { top: .4rem; right: .4rem; }
+  }
+  @media (max-width: 700px), (pointer: coarse) {
+    .sun, .gecko { display: none; }
   }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
@@ -808,6 +810,7 @@ var CFG = {
   },
   cls: { on: 'is-on', muted: 'is-muted' },
   anim: { hold: 'splash-hold' },
+  layout: { hideOrnaments: '(max-width: 700px), (pointer: coarse)' },
   chime: {
     partials: [1.00, 2.00, 2.76],
     peak: 0.012,
@@ -880,6 +883,8 @@ var CFG = {
   var pageAudio = document.getElementById(CFG.ids.pageAudio);
   var gecko = document.getElementById(CFG.ids.gecko);
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hideOrnaments = window.matchMedia(CFG.layout.hideOrnaments);
+  function ornamentsOff() { return reduce || hideOrnaments.matches; }
   var phase = reduce ? 'page' : 'splash';
   var started = false;
   var muted = false;
@@ -1091,7 +1096,7 @@ var CFG = {
   }
 
   function startGecko() {
-    if (reduce || !gecko || gecko.dataset.live === '1') return;
+    if (ornamentsOff() || !gecko || gecko.dataset.live === '1') return;
     gecko.dataset.live = '1';
     var G = CFG.gecko;
     var gx = G.startX;
@@ -1128,6 +1133,7 @@ var CFG = {
     }, { passive: true });
 
     function frame(now) {
+      if (ornamentsOff()) { gecko.dataset.live = ''; return; }
       requestAnimationFrame(frame);
       var dt = Math.min(G.maxDt, (now - last) / 1000);
       last = now;
